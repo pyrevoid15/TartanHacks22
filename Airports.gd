@@ -36,9 +36,11 @@ func on_dropoff(where):
 	if where == current_airport:
 		print("100 pts")
 		globals.score += 100
+		globals.fuel = 60
 	elif where.global_position.distance_to(current_airport.global_position) < 500:
 		print("20 pts")
 		globals.score += 20
+		globals.fuel = clamp(globals.fuel + 10, 0, 60)
 	else:
 		print("no points")
 	
