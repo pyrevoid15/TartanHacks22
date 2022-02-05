@@ -1,5 +1,7 @@
 extends Area2D
 
+signal dropoff(where)
+
 export(String, MULTILINE) var prompt: String
 
 func is_player_here():
@@ -9,4 +11,4 @@ func is_player_here():
 
 func _input(event):
 	if event.is_action_pressed("dropoff") and is_player_here():
-		print(name)
+		emit_signal("dropoff", self)
