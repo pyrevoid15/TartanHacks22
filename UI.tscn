@@ -30,17 +30,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TutorialText" type="Label" parent="."]
-anchor_left = 0.5
+[node name="DropOffText" type="Label" parent="."]
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -336.0
 margin_top = -100.0
-margin_right = 336.0
 text = "Press E to drop off passengers
 A/D to steer"
 align = 1
+autowrap = true
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -65,4 +63,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="timeout" from="Timer" to="TutorialText" method="hide"]
+[connection signal="timeout" from="Timer" to="DropOffText" method="hide"]

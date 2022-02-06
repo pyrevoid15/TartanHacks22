@@ -19,7 +19,10 @@ func set_score(x):
 		get_tree().change_scene_to(WIN_SCREEN)
 
 func _process(delta):
-	fuel -= delta
+	var fuel_used = delta
+	if Input.is_action_pressed("boost"):
+		fuel_used *= 3
+	fuel -= fuel_used
 	progress_bar.value = fuel
 	if fuel <= 0:
 		get_tree().change_scene_to(LOSE_SCREEN)

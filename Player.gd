@@ -2,6 +2,7 @@ extends KinematicBody2D
 class_name Player
 
 export var SPEED: float
+export var BOOST_SPEED: float
 export var STEER_SPEED: float
 
 onready var sprite = $Sprite
@@ -11,8 +12,8 @@ func _physics_process(delta):
 	var steer = Input.get_action_strength("right") - Input.get_action_strength("left")
 	
 	var speed = SPEED
-	if Input.is_action_pressed("debug_boost"):
-		speed = 10*SPEED
+	if Input.is_action_pressed("boost"):
+		speed = BOOST_SPEED
 	
 	sprite.rotate(steer*STEER_SPEED*delta)
 	

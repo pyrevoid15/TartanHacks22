@@ -1,5 +1,13 @@
 extends Node2D
+class_name Airports
 
+enum Correctness {
+	CORRECT,
+	CLOSE,
+	WRONG
+}
+
+signal answered
 signal airport_chosen
 
 var regions = []
@@ -37,11 +45,15 @@ func on_dropoff(where):
 		print("100 pts")
 		globals.score += 100
 		globals.fuel = 60
+		emit_signal("answered", Correctness.CORRECT, current_airport, where)
 	elif where.global_position.distance_to(current_airport.global_position) < 500:
 		print("20 pts")
 		globals.score += 20
 		globals.fuel = clamp(globals.fuel + 10, 0, 60)
+		emit_signal("answered", Correctness.CLOSE, current_airport, where)
 	else:
 		print("no points")
+		emit_signal("answered", Correctness.WRONG, current_airport, where)
 	
+	current_airport = where
 	choose_airport()

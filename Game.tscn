@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://map-sm.png" type="Texture" id=2]
+[ext_resource path="res://map-new-sm.png" type="Texture" id=2]
 [ext_resource path="res://Airport.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Globals.gd" type="Script" id=5]
@@ -20,6 +20,9 @@ LOSE_SCREEN = ExtResource( 8 )
 follow_viewport_enable = true
 
 [node name="Scene" type="Node2D" parent="SceneLayer"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Map" type="StaticBody2D" parent="SceneLayer/Scene"]
 scale = Vector2( 3, 3 )
@@ -29,10 +32,8 @@ __meta__ = {
 }
 
 [node name="Map" type="Sprite" parent="SceneLayer/Scene/Map"]
+scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SceneLayer/Scene/Map"]
-polygon = PoolVector2Array( -1374, -1348, -1704, -1307, -1977, -1198, -2296, -946, -2567, -588, -2687, -217, -2687, 236, -2514, 680, -2193, 1069, -1709, 1313, -1513, 1349, -421, 1349, 1558, 1358, 1756, 1293, 2120, 1109, 2458, 779, 2614, 460, 2673, 279, 2701, 55, 2684, -160, 2617, -476, 2427, -803, 2212, -1045, 1935, -1218, 1480, -1332, 434, -1349, -1371, -1348, -1223, -1553, 2808, -1556, 2835, 1586, -2872, 1513, -2840, -1483, -1356, -1524 )
 
 [node name="Airports" type="Node2D" parent="SceneLayer/Scene"]
 script = ExtResource( 6 )
@@ -45,9 +46,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="NYC" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
-position = Vector2( -3387, -2448 )
+[node name="New York City" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -3660, -2060 )
 prompt = "I want to see the Big Apple!"
+
+[node name="Los Angeles" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -5941, -1723 )
+prompt = "I want to see the Hollywood sign."
+
+[node name="Chicago" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -4412, -2120 )
+prompt = "I want to visit the windy city."
+
+[node name="Pittsburgh" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -3989, -2033 )
+prompt = "I want to go to Carnegie Mellon University."
 
 [node name="North Europe" type="Node2D" parent="SceneLayer/Scene/Airports"]
 __meta__ = {
@@ -55,37 +68,111 @@ __meta__ = {
 }
 
 [node name="London" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( -388, -2997 )
+position = Vector2( -27, -2589 )
 prompt = "I want to see Big Ben."
 
 [node name="Dublin" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( -628, -3059 )
+position = Vector2( -325, -2663 )
 prompt = "I want to visit the largest park in Europe."
 
-[node name="Glasgow" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( -486, -3178 )
-prompt = "I want to meet a Glaswegian."
-
 [node name="Copenhagen" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( 20, -3180 )
+position = Vector2( 523, -2813 )
 prompt = "I want to go to the city with the lowest crime rate."
 
-[node name="Tallinn" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( 564, -3318 )
-prompt = "I want to try Verivorst."
-
 [node name="Berlin" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( 130, -2999 )
+position = Vector2( 665, -2634 )
 prompt = "I want to see the Brandenburg Gate."
+
+[node name="Amsterdam" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
+position = Vector2( 257, -2630 )
+prompt = "Oops. I left my bike at home!"
+
+[node name="East Asia" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Beijing" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 5874, -2021 )
+prompt = "I want to see the Forbidden City."
+
+[node name="Shanghai" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 6031, -1526 )
+prompt = "I want to visit the Bund."
+
+[node name="Bangkok" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 5025, -692 )
+prompt = "My wife has a real love for Thai food. She'd love this trip."
+
+[node name="Tokyo" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 6973, -1787 )
+prompt = "I used to think they had the Eiffel Tower. ...turns out I was wrong."
+
+[node name="Seoul" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 6438, -1847 )
+prompt = "My cousin is obsessed with K-pop."
+
+[node name="Oceania" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Guam" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 7237, -685 )
+prompt = "I am going to study the Mariana Trench."
+
+[node name="Central America" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Panama City" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
+position = Vector2( -3963, -469 )
+prompt = "I want to see the shortcut between the Atlantic and Pacific."
+
+[node name="Kingston" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
+position = Vector2( -3866, -929 )
+prompt = "I am attending a big reggae concert next week."
+
+[node name="Mexico City" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
+position = Vector2( -4954, -964 )
+prompt = "I want to visit the most populous city in North America."
+
+[node name="Mediterranean" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Cyprus" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 1655, -1749 )
+prompt = "I am visiting an island in the Mediterranean."
+
+[node name="Istanbul" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 1358, -2032 )
+prompt = "Oh no, I can’t go back to Constantinople!"
+
+[node name="Paris" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( -36, -2448 )
+prompt = "I want to see the bell named Emmanuel."
+
+[node name="Madrid" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( -177, -2027 )
+prompt = "I have business with the Spanish prime minister."
+
+[node name="SouthCentral Asia" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="New Delhi" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( 3833, -1441 )
+prompt = "I want to see Lal Qila."
+
+[node name="Kathmandu" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( 4128, -1429 )
+prompt = "I am going to climb Mt. Everest."
+
+[node name="Mumbai" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( 3657, -909 )
+prompt = "I'm a time traveler who wants to see Bombay."
 
 [node name="Player" parent="SceneLayer/Scene" instance=ExtResource( 1 )]
 process_priority = 3
-position = Vector2( -3651, -2441 )
+position = Vector2( -3080, -1836 )
 SPEED = 70.0
+BOOST_SPEED = 150.0
 STEER_SPEED = 1.5
 
 [node name="UiLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="UiLayer" instance=ExtResource( 4 )]
 
+[node name="Airport" parent="." instance=ExtResource( 3 )]
+
 [connection signal="airport_chosen" from="SceneLayer/Scene/Airports" to="SceneLayer/Scene/Player" method="on_destination_changed"]
+[connection signal="answered" from="SceneLayer/Scene/Airports" to="UiLayer/UI" method="on_answered"]
