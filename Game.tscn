@@ -35,6 +35,16 @@ __meta__ = {
 scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 
+[node name="Map2" type="Sprite" parent="SceneLayer/Scene/Map"]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+offset = Vector2( -2000, 0 )
+
+[node name="Map3" type="Sprite" parent="SceneLayer/Scene/Map"]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+offset = Vector2( 2000, 0 )
+
 [node name="Airports" type="Node2D" parent="SceneLayer/Scene"]
 script = ExtResource( 6 )
 __meta__ = {
@@ -48,19 +58,60 @@ __meta__ = {
 
 [node name="New York City" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
 position = Vector2( -3660, -2060 )
-prompt = "I want to see the Big Apple!"
+prompt = [ "I want to see the Big Apple.", "I am on my way to Times Square." ]
 
 [node name="Los Angeles" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
-position = Vector2( -5941, -1723 )
-prompt = "I want to see the Hollywood sign."
+position = Vector2( -6029.4, -1772.44 )
+prompt = [ "I want to see the Hollywood sign.", "I think I will retire after this next movie role." ]
 
 [node name="Chicago" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
 position = Vector2( -4412, -2120 )
-prompt = "I want to visit the windy city."
+prompt = [ "I want to visit the Windy City," ]
 
 [node name="Pittsburgh" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
 position = Vector2( -3989, -2033 )
-prompt = "I want to go to Carnegie Mellon University."
+prompt = [ "I want to go to Carnegie Mellon University." ]
+
+[node name="Toronto" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -4004.12, -2179.15 )
+prompt = [ "I want to visit the CN Tower." ]
+
+[node name="Orlando" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -4083.66, -1419.65 )
+prompt = [ "I am going to Disney World." ]
+
+[node name="New Orleans" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -4538.41, -1514.51 )
+prompt = [ "What do you mean Mardi Gras is not happening yet?!" ]
+
+[node name="Washington" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -3845.87, -1890.64 )
+prompt = [ "I want to see the Washington Monument." ]
+
+[node name="Las Vegas" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -5715.39, -1886.34 )
+prompt = [ "I am not going to the casino zone. I am going to the actual city. There’s a difference." ]
+
+[node name="Boise" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -5751.35, -2303.17 )
+prompt = [ "I am going to give these fancy potatoes to my brother, who is a farmer in the West." ]
+
+[node name="Boston" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -3537.07, -2136.33 )
+prompt = [ "I was invited to a most peculiar tea party 200 or so years ago. No, I will not tell you how I was there." ]
+
+[node name="Houston" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -4869.07, -1488.33 )
+prompt = [ "I am taking a trip to Space City." ]
+
+[node name="Phoenix" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -5365.07, -1692.33 )
+prompt = [ "I am planning to see the Grand Canyon on foot.
+" ]
+
+[node name="St Louis" parent="SceneLayer/Scene/Airports/North America" instance=ExtResource( 3 )]
+position = Vector2( -5365.07, -1692.33 )
+prompt = [ "I left my phone in the big arch there, so I am just stopping by to get it. How else am i supposed to get it but by plane?" ]
 
 [node name="North Europe" type="Node2D" parent="SceneLayer/Scene/Airports"]
 __meta__ = {
@@ -68,111 +119,361 @@ __meta__ = {
 }
 
 [node name="London" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( -27, -2589 )
-prompt = "I want to see Big Ben."
+position = Vector2( -9.53857, -2596.94 )
+prompt = [ "I want to see Big Ben.", "I am going to see the Prime Meridian in person.", "I am going to meet a buddy to study Hadrian's wall." ]
 
 [node name="Dublin" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
 position = Vector2( -325, -2663 )
-prompt = "I want to visit the largest park in Europe."
+prompt = [ "I want to visit the largest park in Europe.
+" ]
 
 [node name="Copenhagen" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( 523, -2813 )
-prompt = "I want to go to the city with the lowest crime rate."
+position = Vector2( 605.545, -2781.25 )
+prompt = [ "Have you ever been to Tivoli Gardens. It's the most visited amusement park in Scandinavia.", "I am going to enact Hamlet in its proper setting with some randos from the Internet." ]
+
+[node name="Stockholm" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
+position = Vector2( 905.207, -2956.55 )
+prompt = [ "So... I heard you like Minecraft. Is this true?" ]
 
 [node name="Berlin" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
-position = Vector2( 665, -2634 )
-prompt = "I want to see the Brandenburg Gate."
+position = Vector2( 653.888, -2607.01 )
+prompt = [ "I want to see the Brandenburg Gate.", "I have business with the Chancellor of Germany." ]
 
 [node name="Amsterdam" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
 position = Vector2( 257, -2630 )
-prompt = "Oops. I left my bike at home!"
+prompt = [ "Oops. I left my bike at home!" ]
+
+[node name="Prague" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
+position = Vector2( 757.031, -2445.86 )
+prompt = [ "I want to see where the defenestrations happened." ]
+
+[node name="Warsaw" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
+position = Vector2( 1100.35, -2592.73 )
+prompt = [ "I want to see the birthplace of Marie Curie." ]
+
+[node name="Lithuania" parent="SceneLayer/Scene/Airports/North Europe" instance=ExtResource( 3 )]
+position = Vector2( 1260.29, -2771.53 )
+prompt = [ "Am going to where the internet is fast and the trees are plenty, I heard." ]
 
 [node name="East Asia" type="Node2D" parent="SceneLayer/Scene/Airports"]
 
 [node name="Beijing" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
 position = Vector2( 5874, -2021 )
-prompt = "I want to see the Forbidden City."
+prompt = [ "I wanr to see the Forbidden City." ]
 
 [node name="Shanghai" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
 position = Vector2( 6031, -1526 )
-prompt = "I want to visit the Bund."
+prompt = [ "I want to visit the Bund." ]
 
 [node name="Bangkok" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
 position = Vector2( 5025, -692 )
-prompt = "My wife has a real love for Thai food. She'd love this trip."
+prompt = [ "My wife has a real love for Thai food. I should bring some back." ]
 
 [node name="Tokyo" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
 position = Vector2( 6973, -1787 )
-prompt = "I used to think they had the Eiffel Tower. ...turns out I was wrong."
+prompt = [ "I used to think they had the Eiffel Tower. ...turns out I was wrong." ]
+
+[node name="Hiroshima" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 6617, -1735 )
+prompt = [ "I would like to see the Atomic Bomb Dome." ]
 
 [node name="Seoul" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
-position = Vector2( 6438, -1847 )
-prompt = "My cousin is obsessed with K-pop."
+position = Vector2( 6369.74, -1824.78 )
+prompt = [ "My cousin is obsessed with K-pop..." ]
+
+[node name="Lhasa" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 4385.23, -1640.69 )
+prompt = [ "I heard the Dalai Lama used to live there." ]
+
+[node name="Taipei" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 6059.94, -1250.08 )
+prompt = [ "I am buying expensive computer chips." ]
+
+[node name="Saigon" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 5359.53, -536.19 )
+prompt = [ "Also known as Saigon." ]
+
+[node name="Hong Kong" parent="SceneLayer/Scene/Airports/East Asia" instance=ExtResource( 3 )]
+position = Vector2( 5678.3, -1115.38 )
+prompt = [ "The International Chinese New Year Night Parade happens there." ]
 
 [node name="Oceania" type="Node2D" parent="SceneLayer/Scene/Airports"]
 
 [node name="Guam" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
 position = Vector2( 7237, -685 )
-prompt = "I am going to study the Mariana Trench."
+prompt = [ "I am going to study the Mariana Trench." ]
+
+[node name="Honolulu" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( -7900.02, -1070.08 )
+prompt = [ "I heard this city is located near a volcanic hotspot. i want to see the lava flow." ]
+
+[node name="Sydney" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 7477, 1775 )
+prompt = [ "That Opera house is in every brochure I could find.", "I think that's where the fish found Nemo." ]
+
+[node name="Singapore" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 5201, -77 )
+prompt = [ "I want to visit the Orchard Road district." ]
+
+[node name="Manila" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 6049, -665 )
+prompt = [ "I am going to Manila." ]
+
+[node name="Brunei" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 5701, -181 )
+prompt = [ "Have you been to Brunei?" ]
+
+[node name="Perth" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 5829, 1667 )
+prompt = [ "So, Perth has a zoo." ]
+
+[node name="Jakarta" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 5349, 307 )
+prompt = [ "The capital of Indonesia is my destination." ]
+
+[node name="Wellington" parent="SceneLayer/Scene/Airports/Oceania" instance=ExtResource( 3 )]
+position = Vector2( 8777.15, 2024.85 )
+prompt = [ "I am moving to New Zealand." ]
 
 [node name="Central America" type="Node2D" parent="SceneLayer/Scene/Airports"]
 
 [node name="Panama City" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
 position = Vector2( -3963, -469 )
-prompt = "I want to see the shortcut between the Atlantic and Pacific."
+prompt = [ "I would like to see the Panama Canal from the air." ]
 
 [node name="Kingston" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
 position = Vector2( -3866, -929 )
-prompt = "I am attending a big reggae concert next week."
+prompt = [ "I am attending a Reggae concert. It's kinda far though." ]
 
 [node name="Mexico City" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
 position = Vector2( -4954, -964 )
-prompt = "I want to visit the most populous city in North America."
+prompt = [ "I want to visit the most populous city in North America.", "I am a time traveler on my way to see Tenochtitlan." ]
+
+[node name="Martinique" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
+position = Vector2( -3056, -740 )
+prompt = [ "I am going to Martinique." ]
+
+[node name="Port-au-Prince" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
+position = Vector2( -3618, -952 )
+prompt = [ "I am returning to meet with my friends from the Earthquake relief." ]
+
+[node name="Havana" parent="SceneLayer/Scene/Airports/Central America" instance=ExtResource( 3 )]
+position = Vector2( -4116, -1146 )
+prompt = [ "I want to see the city in Camila Cabello and Young Thug’s hit song." ]
 
 [node name="Mediterranean" type="Node2D" parent="SceneLayer/Scene/Airports"]
 
 [node name="Cyprus" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
 position = Vector2( 1655, -1749 )
-prompt = "I am visiting an island in the Mediterranean."
+prompt = [ "I am visiting an island in the Mediterranean.", "The Greek goddess Aphrodite was said to be from there, I think." ]
 
 [node name="Istanbul" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
 position = Vector2( 1358, -2032 )
-prompt = "Oh no, I can’t go back to Constantinople!"
+prompt = [ "Constanbul. No?", "I want to see the Hagia Sophia." ]
 
 [node name="Paris" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
-position = Vector2( -36, -2448 )
-prompt = "I want to see the bell named Emmanuel."
+position = Vector2( 97.3417, -2414.66 )
+prompt = [ "I want to see the Eiffel Tower.", "Notre Dame is quite big, but I am there specifically to see the bell Emmanuel." ]
 
 [node name="Madrid" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
-position = Vector2( -177, -2027 )
-prompt = "I have business with the Spanish prime minister."
+position = Vector2( -191.287, -2014.3 )
+prompt = [ "The bullfighting is a weekly thing there." ]
+
+[node name="Rome" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 640.813, -2106.95 )
+prompt = [ "I want to see the Colosseum." ]
+
+[node name="Athens" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 1166.44, -1907.39 )
+prompt = [ "I like all the columns in the Parthenon. The ancients were practical like that." ]
+
+[node name="Barcelona" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 13.6201, -2060.63 )
+prompt = [ "I am visiting Catalonia to take notes on city planning." ]
+
+[node name="Lisbon" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( -451.429, -1946.59 )
+prompt = [ "A famous Port-uguese. I’ll see myself to the back." ]
+
+[node name="Budapest" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 958.838, -2340.3 )
+prompt = [ "Buda, Obuda, and Pest combined to form Voltron..." ]
+
+[node name="Tunis" parent="SceneLayer/Scene/Airports/Mediterranean" instance=ExtResource( 3 )]
+position = Vector2( 511.38, -1781.61 )
+prompt = [ "I am a time traveller and I would like to see Carthage." ]
 
 [node name="SouthCentral Asia" type="Node2D" parent="SceneLayer/Scene/Airports"]
 
 [node name="New Delhi" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
 position = Vector2( 3833, -1441 )
-prompt = "I want to see Lal Qila."
+prompt = [ "I want to see Lal Qila." ]
 
 [node name="Kathmandu" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
 position = Vector2( 4128, -1429 )
-prompt = "I am going to climb Mt. Everest."
+prompt = [ "I plan to climb Mt. Everest." ]
 
 [node name="Mumbai" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
 position = Vector2( 3657, -909 )
-prompt = "I'm a time traveler who wants to see Bombay."
+prompt = [ "I am a time traveler who wants to go to Bombay.", "I am an actor in an upcoming Indian film." ]
+
+[node name="Kabul" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( 3480.73, -1680.72 )
+prompt = [ "I want to visit friends in Kabul." ]
+
+[node name="Sri Lanka" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( 4046.79, -377.345 )
+prompt = [ "I want to see the Pearl of the Indian Ocean." ]
+
+[node name="Moscow" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( 1844.38, -2736.73 )
+prompt = [ "My friend a geography buff. He say the colorful buildin’ ain’t acshally the Kremlin. I’s surprised!" ]
+
+[node name="47" parent="SceneLayer/Scene/Airports/SouthCentral Asia" instance=ExtResource( 3 )]
+position = Vector2( -9158.09, -3362.15 )
+prompt = [ "Y̸̡̥͓͎̣̹͚̭̻͉̯̟͌%̵͍̥̱͎̞̹̳̋͌̆͆͌̽͒̅̈́̍́͆̔̚̕ͅͅȅ̸̢̧̗̠̻̦̞̭̯̠̈́̇͛̈́͑̉̀͘̚͠$̷͈̦͑Ỷ̴̧̛̛̰̻̜͓̠͖̦͋͂̄̾͐̉̄͌̃͝͠ţ̶̧̡̰̹͍͙̖̱̩͙͖̞̣̿͗̅̕ȑ̶̠̻̞͉̗͍̹̤͙̟̒͗̊̊̌͑̽̓̂́̇̕͘ͅd̷̡̘͙͍̥͓̤͔͇͔̭̊͒͆͝y̶̲̮͓̾̇̆̉͜͝͝u̵̡͉̱̮̲̔̋̍̊̒́̒̑̚̚6̴̛̛͎̖̘̌̓̂̒̆̃̀̓T̶͓͎͔̠̯̜͎̫͑̏͘͝R̵̡̧̨̛̛̛̻̺̱̺͓̺͈̩̱̈́͐̊̀̾̔̏̚̚͝͝t̸͔̓̈́ͅd̶̨̧̧͔̰̪̮̹̻͚͉͋̎́͆̑̐̈́̃̊̿̔͌̽͠͝ÿ̴̡̯͚͎̠͈͕̦͕͍̹̻̯͊͋́̈́̎̈̀Ų̴̧̞̱̙͍̯̬̍̉͜Ÿ̷̲̗͎̟͔̼̟͎̰̀͌̊̅͛̓̅̀̕ͅt̶̨̛̛̮̥̞͓̒̾̑̐̿̓͋̉̚̚e̴̢͓̲̠̳͒͆̚͝S̷̨̢̡̮̳͕͚̞̣̭͐̈́̓͊͛̍̏̀́̚ͅR̵̞̾̈́̔̌̒̉͛̓̀͛̀̓̓͝4̷̙̖͖̰͚̭̐͐́̐y̷̞̖̱͇̔͗͂̾͌̕ͅȒ̴̨̡̝̘̪͔̜͕̻̹ͅÈ̸̟̥͈̺̳͕͍̗̃̔̓̎̄͗̕͝Ă̶̢̛͉̫̟̝̯̻̬̠̜͙͓͔̜̎͋̎͒͋̎̇̍̆@̷̢̢̫͕̞͍̯̱̺͕͔̃̅̕Ṱ̷͔̩̘͙̬̪͖̭͓̾̌͒̏̃̕̕͜͝͝w̸̜̫͉̺͙̤̫̩̅̀́̔́͒͂͋̓͘͝ͅȑ̸̬̭͈̱̝̫͇̦̘̻̲͙̝͍̾̚g̵͉͍̩̊͛̏̉̿͜͝e̴͚͎͙̺͓͓͖͎̜̬̘̲̟̺̾̏͑̌̊̓̅͊̈̚ͅť̷͓̯̭̬̙̬̱̣̲̬̥̻͚͍̎̈̈́̓͋̽̽̃͒̀̅̊͘͜h̵̢̜̩̜͚͍̹̟̯̹̃͆̈̎̅̔͂͂̆̓̚̕͠D̶͇̑͋̀͑́̉̈́͗Y̵̡̻̠̗̙̼̦̦̝͛̎̏̔̎̔̒̅̅̌̀̌͝͠K̷̡̨̗͍̭̩͙͙̹̺̱̯̪͋̓́̓͜͜S̵̨̧͖̗͇̺̲̩̔̅̉͌̔̌̃̈̍͒͘͜Á̷̢͍̩̈́̄̉̾͋̾̍͂̈̾́̋͝͝5̸̡̛͎͍͕̖͇͚̀̾̈́̀͐̔́͒͠y̷̨̯̹̹͔̖̰̝͖̳͇͎̘͝3̶̢̧̧͓̟̟̗̳̤̝̬̫̱̱̊̂̏͐̎̆̐̂͐͌͠T̴̼̖̀H̵̦̻̬͍͎͕͆̿̌̋͂̑̀͐̊̆́̋͂̚̕S̵̳͕̯̺̠̘̯̭̻͍͎͇̻͊̽͜͜Ỵ̷̠̈́̇͊̈̈́̋̈̌͛̉̕d̶̨̢̪̱̭͓͕̞͇͠S̵͉̻̪̦̳̒̈̔͜͝Ú̴̞̼͉͚̤̤̤͎̼̻̦̼͈̀̎̅̐̏̎̆͐̂͊̅̀̈ͅ^̶̨̝̝͓̫̮͕̼͓̭̫̙̼͋̌̆͋Ḧ̷̡̨͈̫̘̻͖͕͚̙͈̬̜́̉̀̑͋̆͜͝ͅĢ̸̣̗͎̫͔͕̠͇̂̔͋̀͂̔̀̈́̐̚͠J̶̐̔̅͜Ẏ̴̨̨̦̠͓̖̥̗̬̦͚̳͙̍́̂̈́́̔̎͗̽͒͠͠D̸̢̟̱͈̘̹͇̲̳̟͕͖͐̎̽͐̈͋ͅt̵̝͔͓͈̗̩̿́͆̑͝͝f̵̧̨̗̙͖͚̙̠̘̺͍̙̤͗͑͑ͅỲ̵̢̛̳̜̭̱͆̅͐̀̄̿̅̿̅̀͆͠͝5̴̜̹͉̙̰̤̂̇̈́̏͗͊̕ͅ^̷̨̤̮̼͖̥̜͐̊̍͆̀̕W̸̢̡̢̭̱̖̣̙̣̠̽͂̾̆̐̆̃̚͜ͅ$̷̢̤̭̪̘̯͍̘̤̭̰̺̯̻̏̀̈́̈͌͊͛͊̈́̇͠ͅê̵̢̥͚͎̬̒̓̐̔6̴̙̼̪̬͎̦̯̬̩̖̰͗̔̽̈́͒̾̒5̶̟̫͙͎͍͓̇̈̏͝͝&̷̧̛͈̭̣̘̱͕̒̓̓^̶̙͙͇͓̟͇͑̾͋̕Ê̷̺͚͔͙͈͂̀̀̋̔̄͌̅̓̊̀̃͜͝#̴͇̣͇̭̬̞͇̪͉͌͆̃̔͊̏͊̑̀͠y̷̡̢̺̟̤̜̫͍̞̆̈̃͐̈́͒̾͛́5̵̦̥̝͊̈́̋̈́%̷͙̺̜̠͔́͛͐́̒͑̅̀͜H̸͕͚̻͓̭̖͉̩͚̹̾͜È̴͈̻̪̮̙͙̽̍̾̇͑̅̑́͂̈́͜ͅY̸̡̖͍͙̣̼͎̩̮͕̪͙̞̦̋̍̽͜J̵̣͓͒͊́͂͐̂̽̇̕̕̚͝͠ͅf̶̹̗̩̼̒Y̸̟̊̀͜5̵͈̖͓̎̐̽͒̆̚w̶̛͜Ỷ̵̛̺͚͉̜̟̟̂̊̈̀̈́̉͜ͅH̷̙͙̔̈̌̓̀̃͊d̴̢̳̞̯̰̭̹͖̟̰͎̖̙̰̔͋̌͛́̑͘̕͠ý̶͎̰̜̫̦̥̪͉͙̪̻̮̑̐̅̆͒̌̐͌́͝ͅt̴̺̪̳͔̣̭̙̫̻̝̼̣͎̳̎͐̄̾͑̅Y̷̨̲̻̥͚̘̞͔͈̖͍̓́̒̾͌̒͐̒̈͋̚͘͠D̴͕̺͙̗̻͚̱̫̠͚̓̈̓̑̿͐̕͜T̷̢̨̰̯̥̺̖̺́̊̈́̓̑̎̒̐͊Ţ̴̬̲̭̦͎̙̮̦̬̘̈̄̽͑͐̈̈́̑̑͠ͅr̴͖̹̔̽͗̿̿̅̀́̈́͛͜d̵̛͎͇̰̥̳͔̫̤̼̓̾̾͑̌̈̽̆̚͠ͅj̵̡̧̢̨̛̛̯͍̝̞̮͔̫͉͈̄̇͗̒̃ẏ̵̧̧̩̹͔̠͙̂͑͊͛̉̇̿̂̔̇̉̆̈́͜", "J̵̗̱̼̹͂̈́̓̐̊̑̉̇͘͝͠͠T̵̨̢̰̮̳̳̭̘̤̹̻̦͇̬̦̑̌̌̋͆̕I̵̳̫͊̾͠U̴̡̡͈̥̦͍͓̠͖͉͇̳̪̹̜̎Ļ̵̧̳̉̔͛̑̓́̄̐̅̋̕͠E̶̢̳̯̯̬̼̬̩̫͎̗̚͜S̵̞̜̠̤̪̞̮̹̭͇̿͐̈̐̔̀͒͜͝͠Ų̴̞̝̠͎̠͙̖̈̆̀̉͊̎̅̀͝^̸̜̖̳̲̤̻̈́̾̑̀͑̉̂̈́̄̑̋̇͐̚͠W̵̝̫̅͊́̾̃̍̀̆͂̀̈̀̈́͗$̴̝́̑̒͗̈́͊́%̸̳̭̜̅́͑́͆͒̈͠ͅT̵̮̼͙̀R̷̮̥̤̼͚͕͙͔͉̈́̏Y̸̧̛̝̪̳͗̆̐̕̚ͅF̵͖̫̦̫̥̗̱͍̩̮̣͉̜̔͛̕͘͝Į̴̼̞͖̜͖̐̀̑̏̓̕͝Ŗ̵̪̲͚̱̣̜͙͙̣͇̖͍̣̘̈̅̑̀̈́̍̽̿̽͑͊̎̈́͑͝&̶̢̠̳̥̥̣̹̯̼̣̖̯̆é̸̢̛͕͙̜̼̞̗̭̺̳̦̩̃̽̍̓͗͂̿̃͘ư̵̧̞͖͇̜͚̯̒̆̆̿̆̋͆̋͒̊̚͜͝͝ͅ5̷̢͍͚̣͚̳̞͖̘͎̦̝̆̑̾̽̂̌͌ỳ̷̖̗̗͉̙̦ͅY̸͕̜̙͓̌̅̈͌͋͘$̶̧͈̫͔͇͓̮̦̬͎̘̬͇̦̾̽́̿̈́̉͜%̴͕̲̈́̄̚$̷̢̧̤̣̠̈́̂q̸̢̫̟̝́͂͘3̶̪͉̦͇̳̠̰̗̠̬̯͐̏͐͋͊̐̿̈͋͋t̸̨̥̙̖̝̙̭̹͍̫͙͈̳͌͋̅̈͊̈̄͒͘ͅ%̴͖̮͈̦̺̗̼͇̍$̷̲̰̖̥̘͇̥̙͙̀͝ͅW̸̨̡͈̤̅͛͆͊̈́̽̄̽̑̎̂̚͘͠%̵̛͙̤͔̙̻͔̥͉̬͖̙̗͚̩̙͒̀̿̍̑̆͗̈́̓͆͝Ę̴̻̙͍͓́̐͝Y̸̢̛͎͉͉̹͊̀̀̄̈͆͛̚͠͠4̸͍̦̱̊̈̈́͑͊͂̅̈́͌͊͠͝w̸̢̛̳͕̤̻̤͙̯̻̟̘͚̻̫̯̅̋̔̈́̒̌̈͌̀̒5̷̺̭͚͇͑̆̃̈́͆̉̌̚y̸̛̯̯̞͎͖̳̌̾͗͑͠3̸̨̡̞̲͇̲̼̦̲͚̿͐̇͋̔̄̒̈́̽̃̍͐̓T̷̹̊̿̾s̴̨͉̼̯̘̱̺͚̀̒̌4̶̧͉͕͔͕̯͔̻̞̮̱́͗̿͒̽̍̎͆͗̐̉̚͘Ý̵̧̢͕̫͖̹͉͎̰͓̀̒̈́̀͌̈̅%̸͇̒̄̋̎̇͂̕3̵̨̧̢̘̪̭̻̠̥̯͇̝̔̎̋̔͘ͅț̵̡̲̥̜̗͖̙̭͖̥͐̈̿̌̃̆͆̒̒̍̓̕4̵̡̙̼͇̤̌̂ḧ̵̛͇̿́̐̊̑̓͑̆͋̆̚͝͠s̴̳͚̰̞̦̪͔̃̿͐̎͂́̏͒̆͜͜͝͝Ḑ̷̛͖̋̏̉͌̒́̉̿̓̚ṣ̸̿̄͘4̴̪͍͎̒̇̚ỹ̴͔̦͕̺̯̟̃̄͜W̸̛̠̞̘̟̓̅͛̊̈́̀̄̌͝T̵̗̘̜͕̺͛̍͑͐́̇̉%̴̜̥̤̹̣̬͓͔̼̪͋̀͆̉̀̔̄̈́Y̷̧̧̖̝̳̤͍̙̻̠̹̘̜̦̋Ē̴̺̩͖͌̀͋̓̀͘d̶̢̥̜̘͕̮͕͉̫̳̩͗̐̋̈́͜ͅ5̷̨̩͓͙͚̲̊̾̏̚͝Ừ̸̠͑̓͆͠͠͝$̶͖̦̭̹̪͇̫̋̂͝Ỳ̷͈̳͕͋͋̾̽̾̽̐̀͗̌̚͘͘%̵̛̛̜̞̬̼̫͚̪̯̝̟̮̠̖̤̝̏̽̍̑͠ẇ̴̡̗͍͈̠͚͚̩̺̼̝̺̪̝͘ͅK̴̢̧̡̪̣̣͓̜̭͉̽̃̍̽̎̇Ď̵̡̯̣̰̭̱̭̥̥͍͐́̈̎̈́ͅU̶̝͉͓̩̥͖͐̊̿̏̏́̊͂̾̓T̵̹̣̝͚̗̯͈̂̔̉̐͐͑̌͑̿͂̂̍̕x̴̨͓̭̗̩̜͎̜͇̼͔̙̀̾̎̿̚͝͝r̷̡̳̲͔͓̣͓̥̣̦̪̃ḩ̸̖̦̣̓̀͌̂̊́͗̏͋͒̐̕^̴̛̬͋̓̈́̔̌̏́͊́̔͘͠&̶̨̼͈͍̦̲̬̤̘͐̂͑ͅR̷̛̛̭̮̯͓͉̥̆̓͘͠D̵͈͎̱̼̰̝̦̝̍͊̍̄͋5̵̢͉͇̹̫̙̭̗̩͎̞̗̗̣̠̅͂̐̆̚̚6̸̡̓̽̓̃̏̉̎͆&̴̲̺̘͉̞͖̘͖̘͖͑̃͑͆́̾̋͑́̽͝I̵̧̢̢̛̟̞̫̠͕͚̙̤͔̮̪̎̈́͌̀̓͒̒̓̚̚͠8̵̧̮͌̈́̑̄̎̽̋͘̕ṛ̵̝̮͎̤͖͍̖̘̽̓͝͠i̸̡̛̭̥̓̿͐͛̋̌͗͊͝͝f̴̨͇̗͈̙̩̰͔̫͉̞͚̼̉̉̄͌͐͆͋̋̍̀̋̕͜͝ͅỸ̷̺̦̦͔͙̺̳͙̱͊̄&̵̯̮̻̆̒I̸͓̣͈̖̘͕̪̪͖͛͋͊̊̒̔̓̌͝E̷̦͆͘̕K̷͕͕͖͚̥͔͕̉̽̉͠U̶̧͖̖̻̤̲̗͛̀̏͋̏̽̆͗̾́͂͘̕͜͝͠ͅF̷̡̛̛͓̹̺̭͇̤̠̖͍̲̺͔̼͎̓̍͆͐͛́̌̂̈́͂͗Y̸̨̨̛̼̬̹̞̠̖͔̎̑̒ͅD̷̨̠̞͚͈̀̆͜t̴̮͕͗̌̓́̉s̵̖̞̫̗̳̟͕̙͒̇̊͆͐̄̉͆͜5̴͔̲̮͉̓̐͒͊͋̓͋̄6̷̟̒̉͒̆́̄̒̌̎́̈́͘&̸̹̪̘̏͗͌͘E̴̛͎͔͋͂̽̆̒̈́̿̑̋̔̀̔͠6̷̛̛͍̻̖̻̙́͑̄̉͂̒̆̂́͊̂̎ȕ̴͖͍̝̹̣̠̜̒ḑ̸̡̣̣̞̯͈̘͍̺͔́̓̈́̎͆̊͐̉̆͊͋͠Ţ̵̡̣̩͔͇̮̟̩̳̠͚̟̔͘ͅ&̸̡̛̲̦̗̦̤̩͛̎̍̈́͂̉", "(̵̨͙͚͍͍͖̤̬̙̺͖̭̀̓)̷̗̝͕͚͔͖̺̯͋̀̾̿͐͜ͅ(̶̧̨̗͔͂̇̄̽́̀͊̽́̐̃͠)̴̢̛̗̭͍̤̩̖̯̓̈̾̓̈́͒̀̈͛̈̕ͅͅ(̶͔͖̮̖͚͓͖̅͝)̴̹͂̿̀͛͆̀͝(̶̞̒̔̃)̷̛̲̼̠̯͖̦̭͇̗͋͑̿͂̿͒̇̓̾̈́̿̏͝(̷̺̒̚)̶̼͓̇̇̀̈͗́̀̇̎̕͝(̷̦̜͍̋̉̈́̽͌̈́͆̋̓̓̀̇̈́͠)̵̢̝̗̿̀͝͝(̷̧̛̙̬̦̖͉̯̲̈́̄͑̅̿̈́̾̂̋̐͛̔̊͂͜)̶̫͑̇͝͝)̶̲̹͉͓͚̲̜̞̻̲͚͚̘́(̴̢͉̳̪͓̰̙̠̙̲̤͆̒̂̇̀̅͒̈́̾͘͜)̷̩̩̖̘͉͌̽̄̇̾̓̊͋̀̋(̴̡̧̪̤͎͚͊̓̑̎͋̄͛̈́̊͘͝)̵̥̪̤̙̹̞̙̥̲͈̫̱̟͖̳̎̆̒̅́̈̃(̷̢͙̬̺̠̼͈̪̘͕̝̲̓̇̆͠)̴̧̞̙̫͓̦̠̙͎͎̜̲͙̜̋̓̈́̃͑́͒̒̔͝(̴͈̬̾͗̄̈͒͊̔͌̂̌̓̚)̸͓̲̿̈̈̾͝͝(̴̟̥̹͍̻̬̪͈̆́̔̈́̊̒͆̽͑͂͘)̷̡̢̭̜̫̲̤͉͖̳̦̯̖̒̈́́̃͑͗͂̃͠(̸̧̝̗͎̫͍͕̟͓̖̋̃͘̚)̶͚̳̻̰̖̥̼͓̯͎̾̽͌̑̋̍͗͗͆̐͐̿̉ͅ(̷̧͙͓̭̰͉̝̻̯͈͓͕̙̀́͛̍͑̚)̸̛̘̣͎͈̬͍͍̙͚̔͐̇̾́̑̇̓̉͂̏͘̕͠(̷̡̗͖͖̰̬̝̺̤̮̒͒̽͊̓̋͆̇̌̅͐͜ͅͅ)̴͇͇̳̼͎̜̪͎̩̥͌͊̑̅̀́͑̌̎̔̀̚ͅ(̴̨̳̺̩̤̞̟̰͎̪̔͑͜)̸̧̧̨̺̹̙̩̖͍͔̬̫͙͍̗͗̆̓͗̌(̷̦̖̩̗̬̏̕͝)̸̤̫̼̰͚͉̰̥̘̬͔̻͊̅̄̏͜(̶̤͈͊̋͒͒̃̄͂͌̎)̸̢̛͖̰̻̭̻͕͔͚͙̬̼͊̏̓́̂̏̄̚̚̕͘͠(̴̢͍̣̘͍̹̖̈͛)̶̣͙̣͕̹̺͇̖̍͑͂͛̃͋̔͊͝ͅ(̶̖͠)̷̧̹̻̘̙͋͑̔̐͌͛͆̐̏͘͝(̴̧̨̱̹͔̩̭̬̝̮̹͉̦̈́́̀̇̐̓́͆͋̚͜͝)̷̡͉͓̬̤̭̤̞̹̙̈́̌̔͜(̸̝̜̲̃̆̉̽͂͌͗̂̾̚͘͘ͅ)̶̱͈̠̲͍͓̈́̋͆̀̄͐͑̋̓̕(̵̢̝̼͚͓̼̞̬̘͚̖̰͔͛̿̏͋̃͘͜)̷̱̯͔̻͉͐̓̏͌̍̈͛̈́̌̌̈́͗͌̕͝(̸̨̧͉̣̜̌͛͜͝ͅ)̷̘̯͎̖̞̤̜̩̞̑̌̿̓̿̋̀̂̈́̓͊(̴̨̈́̊̒̿̉̚͠͝͠ͅ)̵̥̲͊̉̎̾́̐̕(̵̨͖̜͖̟̮̺̮̞̺̋̂̀͠)̸̛̺̤̥͉̤͚̬͙͐ͅ(̶̡̱͎͈̤̰̖̆͂̈́)̶̝̮͓̰̞̝͒̐̈̉̓͐̉̇͋͊̅(̴̛͇̣̦͎̳̜͉͍̉̂̃͂͒̇̚͜)̴͓͕̼̘̣͔̒̌̿͑͆̆̓͆̔́̃͂͝͝(̸̧͔̜͎͚̠͔̝̝̳̟̰̪̜͗̎̃̔̑̑͑̚͜)̸̧̨̢̀͆̈́̀͌̕(̸̪̄͋̓̍̽͂̄̃̆̏̊͝)̶̨̛̘͇͓̰̼͍̖̊̂̄̄̄̑̒͋͋͠͝(̸̯͇̅̔)̷̱̻̹̣̞̮̤̦̹̾́͛̋͝ͅ(̷̛̛͎̱̻̭̰̞͗͋̿̄̃ͅ(̴̨̧̨̬̙̳͎̦̯̜̮̖̇̂̉̌̇̀͜ͅ)̴̛̖̞̊̇̌̇́͒̾̚(̴̠̹̮̣͍͂̽͋̂̆̋̏̔͊͊̽̇̿̚͝)̵͉̳̰͙͕͙̻̫̈̀̏̒͐̓̀̎͝͠(̶̡̜͚̲͚̰̹̉͂͜)̵͙̤̜͉̘͔̩͈͓̈̈́̓̄́̏͂̐̀̆̏̓̌͋͜͜͜(̸̡̨̡̱̬͍̜̰̞̮̂́͗͆̅̚ͅͅ)̴͎̪̾̿̅̍͋̐́̚͝͝)̸̧̢̨̮̞͎̺̙̬̱̓̆́̑̔̈́͌̓͛̋̄̌͝ͅ)̴̢͎̰͓̰̙͚̐(̴̛̬̝̯̖̮͕̠͈̣͔͕̹̅͛̀̃̾̂̉̔̚͜ͅ)̷̢̩̱̜̰̟̠̲̪̰̭̠̺̆͊̌͗͜(̵̜̮̼͔͔̱͕͖̩̱͙̹̗͓̣̔͑̂͋̌̀́̉̓̏)̵̨̧̨̝̣͉̇̍̓͐͜(̶̨̺͕͙͓̖̳̮̫͖͓̀̇̂̂̕(̶̨̜̤̦̪͉̠̬̹̈́̌̀͗̀̀̈̐̑́͝)̶̻̟̹̥̪̱̩͊͆̀͝(̴̛̯̺̥̦͕̠̬͈̥̆̄̅̽̊ͅͅ(̸̡̧̫̪̰̮̱̦̥̥̲̔̌̔)̷̛̺̖͉̰͈̬͓̬̪̳͎̯̗̽͗͛̊̿͝(̵̠̼͚͙̮͎͎͓̼̬̖̜͒̏͂͗̂̔́̊̈́̀)̷̨̢̡̹͇̫̞̭̯̹̘̑͊̐̚ͅͅ(̸̘̑̃̓́̀͝)̸̢̖͇̳̩̺̘̟̤̹̫̗͂̓̎̇͗͆͂̊͊͐̀͂̀͒͜͠)̶̼̇̎̈̉͛)̵̛͖̤̠͌̐͒͐̐͐̋̈̀̀̿͘͝͠(̴͈͙̭͚̘͙̏̊͌(̵͈̭̾̈̂̅͑̈́͗͊̕̕)̷̢̺̓͛(̷̛̯͔̭̼͔͓̃̈́̎̓͛͒̾̚͠͠)̶̗͕̪̳͉̪̬̪̤̬̪̟̹̪̈́͌̾̔̋̌͗(̶̛͔̭͔̰̟̥̖̃͊́̓͆͑͌̾͘͘͠)̷̢̖̪͚̥̼̥͓̫͉͍̟͚̄͛̓̃̏̈́͐͛͝(̵͓̺̗͍̉̓̈́̉̀͋̆̄̄̑̑̃̍͋)̵̢͎̺͇͖͙̲̤͛̇ͅ(̴̩͙̳̝͖͖̊͊͌̒̀̑̋)̴̧̹̖̖͖̹̻͍͍͈̹͕̑̒̌̓̑̊̓́̉̀̌̌̉͝(̸̨̲̩̰̼̮͓͌̽͐͌͛̃̋͒̚͝)̶̨̧̻͍̝̙̝̞̣̙̈̎͂̽̒̌(̴̡̢͍̼͍͙͌͆̀̀̏̅͛̍͘͘͠ͅ)̵̢̒̎(̶̫̭̭̯́̆͊̀̽̊̃͊̊͝ͅ)̸̧͍̤̺͙̩̝̿͊̆̀͒̋̔̓̓͘͘͘͝(̸̡̦̟̦͇̟̥̗̲̯͚͓̞̥͌̉̈́̄̀̈́́̚͜͠͝)̷̡̰̣̖̪̤̈́͒̾̑͒̽̑(̶̹͖̹̇͗̿̏͗̈́̉)̶̨̨̧̛̛̼͙̮̱͓͉̞̙̯̥̳̒̈́̐̒̊͂̕ͅ)̸̧̡̧͈̜͙̰̱̮̫̳͖̬̎̿͑̚)̴̻̱̝̫͔̳͚̥͔̝͉̈́̐̏̊̉̀̈̋͛͊̀͝͝͝͝ͅ(̶̬̞̲̙̦͇̏̇̉̂͐̎̓͗͘͝)̸̨͐̀͂͗̋̒̂̂́́͋͘̕)̴̡̹̘̼̱͎̝͉̱͙͎̭͎̿̎̓̿̔̓̏̾̂̑ͅ(̵̧̮̖̗͉͈̱̣͛͝ͅ)̶̛̪̭̭̣̦͓̂̆́̃̓̒͛̊͆̏͘͠͝(̶̡͎̝̗̬̞̻̞͇̤̭̥̼̘̓̎̏͆͆̔̄̏͗̍̀͝)̶̢̨̧̡̛̖͎̮̘̮̲͓͔̲̺́̆̄̈́̽̿̓̾̐̽́͠͝͝(̴̗͈̬̖͔͑̍̀̆́̈́̃̏͂̕͝)̸̡̧͈̲͉͎̼̻̤̯̦̺̣͍̉̃͗͠(̸̠̭͓̰̳̰̣̞͔̫̆̀̑̅͛͐̋̃͌̓͂͠͝͠ͅͅ)̸̜̺̟͖̼̆̀̓̉̌̈́̀̓̏̓̈́͋͝ͅͅ(̴̦͖̯̯̤̬̺͍͓̰̽̽̅̆̂̕͜)̴͖̞̣̙͈̠̥̦̤̑̑͊̓̾͜(̸̨̣̫̟̬͙͔̋̌̌)̸̧̟̺͎̪̺̣̦͊̀̄̀(̸͓̙̘̱͍̯̹̘͍̦̏̓͐̔͛͋̊̽̊̚͝ͅ)̶̨̹͙̣̜̗̖͉̯̟͉̪̓̎(̴̧̩͖̪͇̮̦̼̘̼̮̔̎͋̐̓͗̈́̉̂̌̀̂̎̃͜)̷̥̹͇̯̓̒̅̋͌͛̒̚͘ͅ(̴͍͈̟̪̱̰̞̝̣̱͖̲̿̕͜)̷̢̖̪̯̻̫̤̭̫́͒͂̆͆)̵͕̱̫̥̪̙͈̔͑̅̓̃̌͌̃̃̒͐̏͋͠)̸̛̲͍̽̈̇͠(̸̨̯͇͓͔̮̼̺̓ͅͅ)̶̣̱̦̝͓̭͎̬̟̣̰́̎̃͊̎͜͜͜ͅ(̷̢͖̘̺̘̭͚̺̝̮̔͊͑͋ͅ)̷̢̡̞̗͇̙̜͇͂͛̈́̓́̄̔͛̕̚̚͠(̵̡̨̜̺̘̻̤̝̞͇͙̉̄̀̀̾̄)̷̢̢͉̙̟̞͖͕͖͚̙̗̪͑͌͊̈́̀͛͐͒͗͌̇̽̚͠(̵̨̛̳̜͇̩̔̔͌̈̍̾͌̌̈̔̋̚)̴̦̣̳͈͔̻̼̗͙̯̥̪̲̺͖̈́͑͗̌̾̾̐̓̑̉͆͝(̷̨̳̠̦̜̺̱̟̞̰͓̘̦̈́͊͘͝ͅ)̵̝͙̜͕̳͙̱͇̬̭̬̙͆̃͆̃̊̒̉̆̓̊́̕͜͠ͅͅ)̶̜̲͈̗̖̠̇͒͊͌̿͐͗̆̆͆̅̆(̸̢̰̞̻̼͇̪͐̀̌͆̈͗̏̐̋̒̀ͅ)̶̡͉̻̺̗̤͇̮̗̻̙͋(̴̖͕͇͙̭͇͍̣̞͐̔̀͐̈͌̃)̶̢̥͍̫̻̦̉̉̈́̊(̴̮̗̲͔̿͌́̂͝)̶̲̂̆̋͛̈́̃̒͑́͒̌͋̈͘͠(̵̦̩͋)̷̹̫̳́̀̑̉́̈́ͅ)̷̨̡̭͇͉͍͎̫̤̌̃̃͂̚̚(̷̛̫̫̤͈̻̼̭̠͂͌̇̅͌̏͂̊̏̂̕)̸̥̘̫͙̱̺̻̩̯̈́͂(̴̡͚̠̦̖͙̟͍̭̬̯̗̹̤͂̎̅̈́́̔̾́͂͑̚͠)̸̣͇̺͚͌̀̉̏̊̂̈̉́́͐̄͠͝(̶̖̟̊", "4̶̳̪̘̜͙̥̬̰͈͉͎̙̌̏̑͗̄̎͐̂̇̊͑̄͊̎̀͆̏͊̕͝7̷̢̨̡̠̪̫̣̫͓̲͕͕̟̬͈̖̣̳̤̪͙̘̊͂͊̏͜4̷̟̟̳̘̳̾7̷̨̼͚̗̮͈͕̲͇̱͇͖͔͈̘͔̪̭̦̱͕͈̪͛̈̒͆̂͂̑̆̓̋͌̃̿̏̒͛̑̓͒̅͆̍̎͐͆̊̊́̌̀̋͒̕̕̚͘͠͝4̶̨̺̟̳̞͚͇̦̩̀̀̒̌͌̍́̌͛̋̔̔̒͑̈́̈̐̽̃̓̒̊͑̾͑̋͋͊̀̏̊͑͑̿̽̽̌̎͒͐͑̀̔͊̕̕͠͠͝͠7̶̢͓͖͈̺̲̪̲͉̝̻̫͓̦̲̮̥̺͓̭̭̹̠̐̉̒4̶̧̨̨̛̥̹̱͚̫̤̦̟͎̫̪̻̺̱̲͔̝̹̦͎̖̗͙̝̮͕̥͛̍͗̌͋̋̄̊̈̈́̓̀͆̅̊͊̌̀̆͂͊̈́̃̀7̶̙͈̻̰̣͔̻̙̥̝̔͂͂͒͂̔͌͗̏̅͂̃̓̉̌͐̾͘͘̚͘͝4̵̨̡̧̨̡̨̨̛̛͙̝̙̻̘̜̼̹͖̥̱̹͉͉̳̪̦̦̦̗̭̹̘͕̫̮̝̺͍̮̱̰̀̾̽̌̆͐͗̓̋̿̿̏̽̂͂͂́̒̔̉̐̓͋͌̅̿͋̌̆͊̋̈́̋͗̊̈̓͘͝͝͝ͅ7̴̨̨̬̺̯̬̲̳̯̓̓̉̃̒̍̒̌͊̓͑̒̓͒̿͆͊̀͆̌̉̀͗̒̀̌̏̉͑̀͊͌͋̚̕͜͝4̴̟̖̙̤͚͚̪̥̜̺͉̟̮͓̟̲̰͖̹͔̠͛́́̉͌̊͗́̄̔̊̐̉͌̂͗͗͑̽̌̄̅́̈́̾̏͗͛̄͌̈́̉͝͠7̵̧̨̧͕̖̠̙̼͔̟͔͇̻͙̦̠͙͚̼̺̼̹͚̰̪͍̺̭̯̪̪͍̟̹̟͎̟̜̺̜̭̬̰̞̽̑̈́̈́̄̽̑̆̔͑̓͂̄͊͛̅͑͐̓̔̐͒̊̓̂̚̚̚͝͝ͅ4̸̧̢͈̤̖̹͉͕͓̜̹̱̳̻͔̻̞̱̟͉͇̺̳̻͈̬͓̣̱̖̳̦̓̓͋̎͋̃̒̂͐͂̈́̀̈́̈́̄͐̂͐͒̓͐̉́̏̽͐̊̅̄̈͝͝ͅ7̷̛̛̰̥̬͖̐̀̃͗̓̈́͐̑̎̍̅̈́͆̎̾̇̄̂̆̌͌̑͐͑͋̆̾͗̿̀̆́͋̀͂̀̂͆͊̚͘͘̕͜͝ͅ4̸̨̧̢̡̢̨̢̡͈̩̘̝̞̩̗̮̫̪̬̳̮͖̻͙̜̰͙͔̯̜̙̻̻̪̰̪̞̮̦͇͙͓̥̜̮̝̱͑͗̐̐͛̉̄̑̑͋́̽̊͌̑͂͊̈́̀̾̄̌͌̉͘͜͝͝ͅ7̴̨̡͚̖̪̗̼̮̟̹̹̘̖͙͖̞̳̻̤̺̜̖̥̰̳̜̘͙̤͙̖͇̣͊͌̓͋̅͐̐͂͌̈́́͌̏̇̎̾̄̄̇̓̎̾̏͛̀̄͗̄̏̈̀́͆̚̚̕͜͝͠͝4̶̧̢̨̹̩̠̪̠̤͙̦̥̪̲͖̜̱͚̙̥͓̰̝̲̻̇͋͑ͅͅ7̵̧̰͙͇̱͉̦͎̬̪̥̪̗͇̬̓͂̌̑̔͋̐͗̈̒̎̉͛̔̏̆̍͘̕͘̚͜͝4̴̡̧̧̢̨̛̳͙̰̼͉͇͖̜̗̦̯̠̻͔̱̙̺̮̳̬̟̤͉̗̮̣̯̙͈̮͓͖̹͙͓̦̯̞̀̽̓̀̔̅̀̏̊́̊̄̀͆̀̋̕͘͜ͅͅ7̶̨̲͖̲̱̖͚̬̼̇̽̏͊͆̾͛̆̆̓͐̋͐̎̓̈͆̀̀͌̋̽͐͗̒͗́͐̿̆̈̇̍̑̑̏͌̑̌̇̊̈́͑̓͠͝4̶̨̢̡̯̈́̀͆͗̂̎͐̽̌͌͊̔͋̿̂̓͌̋̒̾̿̇͝7̸̡̛̛͎͕̥̦̼̓̈́͊̾̀̂̌̔́̑́̋͌̈́̀͑̈́̂̎͑̀̎̾̆̒͐͌̉̎̒̑͌̋̀̚͠͝4̸̧̡̡̨̪̖͎͔͈͓̜̖̣̤͖̟͍̼̳̆͋̄̓̏̔͛͌̑̆͑̒̋͊́͂̀͑̌̒̄̀͌̅͋͑̉́͌͆͑̾̈́̚͘͜͠͝͠͝͠7̸̨̛̞̤̟̗̥̥̪͓̩̫͉̹̘̱̲͙͔͓̀̆̓͛̇̀̊̽͗̅̄̂̅̈́̓̆̓̊̋̽̄̃̌̍͑̈́̉̾̏̀̇̋͘̚͘͘̚͜͝͝͝͠4̴̨̡̛̛̤͚̬̜̤͓̮̹̹̗̳̹̖̱͉͕̤̗͕̻̼̿͋͛̍̇̍͐̔͌̊́̄͋̋̅̅̇̓͑͋́̎͒̑̋̆̄̅̀̈́̀̋͋̓̐̒̐͐͆̈́̚͘̕̕͘̚͜͝ͅ7̴̧̨̢̲̦̣̼̥͓͕͈̠̜̝͖̻̹̞͕̫̞͖̗̭̝͖̹͍̹̰̦̹̳̰̻̦͊͊̂̀̽͋̓̂̀̓͑̋̏͌̋̇́̋̄̊̆̆̆͌͗̚̚͜͜͝͝͠͝ͅ4̸̞̥̟͂̓͂͘̕7̵̠̯̩͔̫̪̻̙̩͖̖̭͎̟̒͒̓́͗̃͂̿̃̏̓̅̔͂̓̐̎̽̀͐̈́̊̈́̑͛͂͌͐͑̆͂̑̽̏́̓̈́͂̉̾̍͑́̚͘̚͘͘͜͝͝4̴̨̨̛̼̘͈͉̣̱͎͚̝̙͈̲̦̥̩̥̪̌̇̅̋̂̈̉̍͑̒͗̓͊̅̑̔̌̈́͊̿̍͑͒́̐͆̊̒́̇̏͋̏͘͘͘͘̕̚͘͝͝7̷̢̡̧̧̢̧̧̨̛̤̠͔̦͕̭̭̘̝̻͉̣̣̖̝̹̭̞͇͈̲̼̻̪͖̯̞̪͕̲̺͕͖͇͍̟̮̝̈͒̃̿́̒̔̓̅̍̉̀̀̔̐̒̈́̐̅̆͛̓͐̈̅̉̍͂͗̈̐̃̐́͐̕ͅͅͅͅ4̷̨̨̨̢̲̙͇̹̭̼̹̼̲̳̞͙̘͕̝̳̲̻͎̱̤͙̮͔̪̩͙͈̭̰̱͓̥̉̑͂͛̅̓̈̆̽̿̀̈̉̐͋̉̉͛͐̆̌̋̽͗̒̐̐͑̾̐̎̓̽̑̚̚͘͝ͅͅͅ7̶̢̨̧̛̛̯̟̥̩̫͔̬͉͍̱͈͎̮͉̩̪̝̮̗̰̝̺̦͉͍̤͔͎̝̙͍̼̩̮͔̈́̎͊͑̍̀̇̋͋̇̔͐̎͋̀͛̓̿̅͆̃̆̽̈́̆̐̎͊̒̉̂̓̏̍̆̎̉̍̓͘̚̕͜͝͝͝͝ͅͅͅ4̵̢̢̨̳̗̬̻̹̣͓̫͚̤̠̩̘̝͎̞̫̙̰̰̦̙͈̙̗͚͈͎͚̭͖̼̤̘͇͈̍̆̿́̐̂͆̌̽͗̃̑̽̓̔̈́̽̇́̒̅̈̄͑́̃̓̃̀́̓̓̒̊͐͛̎͘͘̚͜͜͠͠ͅ7̵̨̧̛̥̰̟̬͈̲̯̹̒̽̂̽̀̃̑̕͠ͅ4̴̟̖̳̼͙̤̮̐̽̎̍̈̑͒̀͗̈́͛̀̋̐̎̍͑̏́͐̉̍̚̚̚͜͠͝7̴̢̡̺̫̟͚͓̙͓̩̬̱̥͚̆̓͑́̉̚͜4̵̨̨̡͖̗̙̖̤̻̮̺͈̲̪̻̯͍̘̰͍̬̯̰̜̺̖̬̱̮̩̲̝̳̺̬͇̇͜7̷̨̨̧͙̤̞̖̞̱̱̰̭͍̱̯̺̪͙̜͗͐̍́̒̔̅̾͊͒̊̄̀͋͑̕͜͜͠4̴̧̨̡̡̦͓̞̜͙̙̟̹̻̩̳̬̣̘͈̦͙͈̟̙̰̺̠͐̃̋͛́̐͋͗̆̉͗͘͜͝͠ͅͅ7̵̧͓̜̣̫̹̫͚͖̣̥̖͍̣͆̿̈́̍̽̇͊͊̓̀͗͆̉̒́̅͋̊̈́̑͛̐̈̆̓͝͝4̴̨̟̟͇͙̮̠͈̺̥̻̫͇̰̟͓̤̻̺̲̥̺̯͒̏͒̏̎̋̋͗̑̚͘͜7̴̧̨̛̛̭͔̣̙͉̘̯̠̼̯̣̖͓̰̗̻̮͕͓̫̺̗̖̩̫͑̿̃͂͛̈́͌̏̀̂̔̄̑̎͠͠4̴̨̢̳̟̻͍̠̝̗̻̭̭͍͉̺̼͍̰̺̱̘̥͕̞͍̄͑̎́͒̌͆̋̿͗́͗̀͆͌̃͑̈́̀̓̒͑̍̒͒͛̈́͗̂͛̆̆̋̈́̚̚̚̕̕̕͜͜͜͝ͅ7̶̡̧̛̻̞͈̠͇̲̘̖̜̫̼̩̻̥̪̖͈̻͍̻̠̭̼̲̭͖̺̣̱̪̤̭͇̫̟̤̩̫̩̩͖̳̿̈́̌̂͂̔̀̑́̌͆̀͗̌́̅̊̇̀͐̽̔͗͑̾̓̂̎̉͋̋́̀̀̂̕̚͘̕͘̚̚͜͝͝͠͝͠͝͝ͅ4̸̨̨̧̨̧̼̜͇͈͙͚̗̮͉͚̲͔̩̤̗̘͍̜̻̤͍̘̭̤̠̲̬͇͖̞͔̯͉̗̞̖͔͎͈͈̆̂̈́̓́̽̊̔̄̊͆͋̐̐́̏̓̑̾͛̓́̍̒̊͗͒͆̿̅̆̿͌̀͐͋̎͆͑̚̚͘͜͜͜͠͝ͅ7̴̧̢̡̡̧̲̳̺̠̝͎̺̰̗̘̰͕͉̩̯͉͍̲͌̑̔̓̉̂́͒̅̒̑̑́̎̋̔͘͜͠4̶̧̛̯̤̖̮̲̹͇̤͍̼̭̟̱͙̥͔͉̅́̐͂̆̍̈́́̍̄̓̈́̏̅̄̀̀́̽̊̕̚ͅ7̸̧̢̡̛̱͈͙̬͈͙̞͖̩̠̖͖͇̪̤̺̯͔͖̩̠̞͚͓̲͎͇̜͔̱̬̦̠͍̫̼͍̻͎̰̭̙̳̒͐̌̉̉̅̉̌̇̊̏͛̑́̈́̍͊͒͊́͂̇͌̀́̇́́̍̄̃̅̒̽̈́͛͘̕͜͜͠ͅ4̴̧̼̤̳̱̱͉̻̠̝͔̰̻̜̪̳͙̭̣̺͉̮͓̞͖̪̮̫̘̞̠̖̀̾̈́́͒͑͛͗̈̉͂̑͌̌̈͗̓͗̋̏̏́̑̈́́̇͛͛̅̂̀̀̎̔̋̀̇̑͘͜͝ͅ7̷̧̡̛͔̱̞̠̤̻̙̻̘̹͕̼̜̞̫̿̾̌̏̊̐̇͆͐̄̃̓͆̀͗̒̋̾̾͑͂̋̂́͘̚̚ͅ4̵̧̛̛̪͉͚̆̈́̌̑̀͌̐̋̈́͐̈́̽̋͑̓̈̋̌̎̄̓̐͋̆̃̅̈́̚̕̕̕͠7̷̨̧̤̤̤͈̖̗̞̦̪̻̙̣͕̖̱̟̏̒̾̽̏̄̑̏͌̋̿̀̏͛̍̇͋̅͂͐͊̈́͌̀̕͘4̵̛̠̩͍̼̭̲̟̘̮͍̓̉͌̔̍̀̽̌̑̓̇̽̈̂̉̒̋̓̈͛̄̎̏̎͐̍̉̅̂͊̏̈́̏̕̚͜͠͝7̵̛̮̤͈̻̝̖̹̜̖͇̻̱̯̏̓̐̓͒̌͆̂̊͊̃̂͊̆̀̀̆̌̊̐̀̒͛͋̊͐̃͆̅͛͊̈́̀̾̀͊͋̆͑̂͘͘͠͝͠͝ͅ4̴̯͇͔̃7̴̨̠̬̠̙̪̤̱͛͆̿̃́̽̓̏̚ͅͅ4̸̡̧̨̲͉̞̠͚̭͍̹͚̦̙̣͇͔̤̞̱̻̹̫̣̲̭̻̼̥̖͕͈͉̬̂7̸̡̡̛̛̳͎͖̪̦͇̠͎̠̺̺͖̝̳̰̺͚͎̼̜̮̻͙̜̜̬̱̪̈̇̿̇̂̌͒̔͑̾̓̇́̓̽͗͌̈̐̈́̄̉̍͗͂̒̇̓͆̂̏̽͗͐͑̌̐͘͘̕͜͜͜͝4̵̡̡̡̛̣̮͇̗̜̯̦̬̦̺̬͎̲̮̣̖͎̠̩͓̣̜̱̼̭͓̰̥̠̼̞̤̳̫͎̞͋̈́̇̑͋̌̉̈́̇̅͛͌̋̅̇̑̂̔̿̋͐͑͐͑̌̈́̏͐͑̚͘͠͠͝7̶̨̡̛̩͚͈̤̭͔̻͖͙̼͇̺̗̺̟̪͖̖͚̺̗̳̮͉͔̥͉͉̮̹̥̻͇̪̻̲͓͑̿͊̿́̌̅̔́͛͂́̏̀̏͐͑̍̄̀͐̃̔̏̒̀̊̌̾̊͒̄̏̓̋́̄̏͌͑́́͌̈́͘̕͜͝ͅ4̴̡̨̛̛̛̫̦̦͖̳̙̯̂͑͂̇͛̈́́͒̐̇̽̄̀͑͋͗̿͆͊̈́͆͒͊̋̓̀̋̅͋̌́̈́̏́̅͛̚͘̕͘͝͠͝͠͝7̶̢̧̨͔̩̺͉̠̻̖̪͚̥͕̫̮̗̱̗̻̭̖̭̤̻̞̱̘̖̠̙̥̠̗̼̼̰̠̺̪̥͍͛͋͐̑̂̈́̽̾̈́̍̾̔͒̾̊̒̽͌̄͋͛̈́̚̕͜͝4̸̢̨̨̧̟̻͉͍͔̪̩̠̖̬͎̣̱̳̠̥͕̦͖̜̫̬̟͍̥̫̠̘̥̞̤̭͍̰̟̬͛̔͒́̓̏̈́͜͜͜ͅͅͅ7̸̢̡̮͉̖̺͇̞͕̦̯̪̰̜̳̤͔̗̱̰̺̩̭̮͈̰̭̦̙̲̯̝̭͕̖̠̖̳̤̫͈̩̟̲̞̤̑̿̅̅͑̾̑͑͝4̸̢̧̢̧̢̡̛̪̰͇͚̮͎̼̲͍̲̜̰̳̰̫̪͓̰̝͉̞̭̪̯̤̪̯̱̣͉̌̒̄̈͊̇͋̂̔͋͂͊̈͂̀͆̀̓̎̈́̒̈́̓̑̅͗͌̏̀́̈̉͛͒̃̇̎̏́̎͒͛̕̚̕͜͜͜͝͝͠ͅ7̵̧̢̧̨̛̛̛̦̞͚̹̫̝͕̜͓̱̪̭̟̟̺̲̭̥̤̣̟͉̜̠͈͔͈͈̜͈̜̟̤̳͚̭̭̒́̓͂̀̈́̉̒̉̋̿͗͂̂͊͛̔̀̔̓̈́̇́̈̀͂̎͆̔̆̑͐̅̀̒̚̕͜͝4̶̧̡̧̢̛̥̱͍̮͍̹̥̼͖̙̻̞͇̮̗̻̭̤̗͈̘̮̥͓̰͇̗̰̮̼̔̆̀͗̍̋̊͗̕͠ͅͅͅͅ7̴̡̧̡̧̡̛̲͇͕̰͔̝̠̺͎̠͉̬̫̗̯͓͙̘̾̓͂̋̒̀̀̂̈́͒̆̓̋̀̾̈́̈́̏̇̽̾̽̅͋͗͂͛̏̍́̎̀͒̾̇̊̎͘͘̚̕̚̚͜͝͠ͅ4̵̢͚̗̲̻͕̩̟̹̯͖̯̫̘̳̦̩̬̜̬͇̜͕̳͍̘̩̱̣̯̊̿̓̈́͋͑͂͂̀͊̋̀̐̔̄̋̿̈̿̓̑͐́̅̍̀͑͂̌̋́͘̕͝ͅ7̵̧̛̦̘̗͇̼̯̓̀̈́̂̿͆͋̋͛̔̿̈́̃̐́̽̄̒̑̓́̋̃͒̔̔͛̍̈́̚͜͠͝͝4̷̨̧̛̛̩̤̭̳̞͔̻͖̥̟̞̞̺͖͈̖̠͚̲̘̱̞͔̻̤͚͔̪̘̺̲̬͙̑̃̏̈́̂̋̎̾̓̀̇͆̽́̊̓̕͘͘͘̚͜͝͠ͅ7̸̼̰̬̞̟̝̣̮͎͎̻͉̪̪̠̫͕̺̤̹͚̘͙̪̟̘̗̥̼̫̬̪͕̖̳̰̈̑̍̅̿̄̊̂̾̏̓̈́͐̍̈́̃̔́͐̍̂̀̾̓̍̏́̀̄͝4̷̨͈͍͔̲͔̯̻̝͙͉͈̩̭͖̟̘̟̦̾͑̒̊̅͒̈́͂̑́́̃͌́͘̕7̴̛̛͓̙̬͚̰͇͓̬̘̹̘̭̻̥̲͍̗͓̪͙̻͋́͗͊̆̈̾͆̈́̿̐́̐̑̄̾͗̀͋̃̍͌̉͆́̃̍̑̕͝͝ͅ4̸̧̧̛̗̜͚̞̩̮̠̻͓̬̹̙͇̭̜͔̊̎́̓̊͂̄̂̋̎̀̓͐̉̊̀̃̅͆͗̾̐̈̄̅̄̒̕̚̚7̴̢̨̢̡̛̫͍̺͕͖͇̜̬̖̬͚̲̯̙̪͎̘̘̘̳͓͔̭̠̭̬͖̜̖͇̖̓̔͋͌̈̑̃̽̅̋̾́͊͊͛̊̍̾́̾̈̎̈͋͐̽͋́̀̕͜͠4̸̡̘̰̯̳̪̪̻̯͇̦̹̥̹͎̳͉͇̰̝̗̜̞͎̯͈͔̫̘̟͛̀̒̎̆̄̑́͋́͗͊͋̒̊̈͐͗̒̕͜͝͠7̵̢̧͉̖̤̲̫̖̳̖̝̝̖͎̱͍̬͕͔̈́̆́̊̽̎̔̋̐́͆̂̎̀͗͂̌̾͊̑̾́̎̓̈͊̀̚͘̚̕͜͝4̵̢̧̥̟̝̺͓̪̥̞͈̼̲͇̇̍͐̅̐̐̈͊͌̽͒̊̇͒7̴̨̧̨̛͚̫͚̱̺̬͔̘͈̟̪̠̪̗̻̩̘̯̠̞̫̗͎͙̳̘͇̹̼̻̓͆͊̊̀͗̿͆́̐̃̋͋͌̈́̏̂̎͐̌̑͐͛̒̉̍͑͗̀̿̃̕̚̕͝͝͝͝ͅ4̶̢̡̗̭̠̳̖̜̠̥̖͖̻͕͇̤͙̞̬͉͔̘̟̲̲̹̣͓̜̼̪̞̬̺͓̇̏͌̀͒̽͋̈́̌̉̈͛̊̓͆̑͊͗͛͊̒́̂̎̏̈́̌ͅͅͅ7̶̡̡̢̢̨̛̗͍̮̟̰͈͇͇̭͇͙̜̗͕͍̼̭͇͓̟̱̩͚̻̳̠̌̎̒̓̉͋̉̏͘͜ͅͅͅ4̴̧̨̢̻̼̠̯̼̰̘̥͍̗͍͕͈̖̦͓̙̬̳̹̣̥̟̥̜̬̥̙̤̮͙͓̭̞̻̰̬͚͓̰̗̏̀̐̽́̌͐̆̋̽̀̈́͆͂̿̓͌͒͂͑̔̋͑̌͂̚̚͜͜7̵̛̱̫͎̫͇͂̏͆̂̀͐̎̃̃̆̇͒͑̓̂̈́͒͐̃́̈́̌́̊͛͘͠͝͝4̶̡̨̧̨̨̞͕̪̫̩̫͔̦̩͓̠̲̦̼̜̝̞̼͓̲̺̠̻͍̜͕͙̤̩͉͍͕̣̙̝̀̎̾͌͋̒͛̑̆̀͗̈́̈̐̄̅̎̂̐͊͐͗͑̉̉̌͑̈́̈́͌̊̑́̋̚̚͜͝͠ͅ7̵̛̭͈͉͔̖̘͙̱̮̝̖̬̟̖̉̾̎̀̽̐͊̈̚̕ͅͅ4̷̪̘̘͖̮̬̮̰̰̖͚̱̘͎̝̰̜̯̻̣̰͎͍͍̹̙̠̯͚͐͑͛͊̿̋͂́͛̌̈͑͋̈́̑̋͊͘͝7̷̨̢̢̧̡͈̯͖̩͚͖̠͚̞̠͕̟̻̖̳̦̥̟̭̗͇͙̠͖̥̠̺̻̮͕̘͍̮͙̜̹̣͍̙̦̝̀̍̊̾̓͊̆̄͘͝ͅͅ4̷̢̢̢͉̫̟͈͉̳͔͓̗͍̣̻̖͔̘̯͓̳͍͚̙̬͈̱̭͇̲̣͓̲̠̙̞̩̗̬͐̑͜͝7̴̧̧̢̼̥̱̦̥̙̞̳̣̮̠̜͉̼͉́̐̃̋͂̾̉̆̄͋̐̈́̿̾̔̓̓̀̇͒͋̃̈̿̐́̌̐̋̉̄̂̈́̏̀̒̑͆̅͛̾̊̚͘͘͝͝͝͝͠ͅͅ4̷̨͙͙̖̺̬͖̟͇̥̩̌̋̈̀̇͋̈͊͛̽̋̽̊͐͝͠ͅ7̸̤̳̥̤̫̩́͒͑4̸̫͙̳̮̲̱͈͋̒̈̉̽̇̌̆̽̋̐̇̈́̈́̄̈͑͊͛͛̕͝͝7̶̧̛̮̠͇̺͉͎̤̝̮̳̫͎͙͔̮͖̻̥̖̲̹̤͙͚͚̖̹̬̯̪̥̬̘̻͛͗͂̎̏̎̓̓͑̽̾̃͛̈̅̌̄̕͜͠ͅ4̴̪̠̪̜̂̅͆͊̓̓́̔̈́̍͂̇͑̋̾̉̒̔̕̕7̸̢̡̨͎̲͙̳̝͚͇̳̬͉̲̟̗͍̥̝̮͓͈͖̬̝̳̤͍̻̖̟̣͎͙͇̠̌̈́̏͆̏̒̓̔͗̊̄̓͒̉̍͊̉̋́̀̾̎̿̕̕͘͜͝͝ͅͅ4̵̢̡͈͖̥͕̪͈͉̭̤͔̠̗̳͓͈̻̹̠̰̦̠͓̟̺̣̥̮̺̪̳̘̫̮̼̖͓̞̹̖̰̩̳̄̇̀̌̔̌͑̈̆̋̀̽̽̏̂͌̽̉́̀́̅̈̈̇͂̓̈́͆̽̿̓̌͐͗̋̎͑̃͐͒̕̕̚͠ͅ7̴̛̺̤̼̺͍͉̪̱̖͚̝͈̇̔͂̅̌̂̔̈́̿̈̓̏́̆͌͊́͛4̷̨̡̙̠̲͍̮͓̻̮̰̤̦͈̹͓̪͇̘̇̇̂͂́̒̈́͌̃͊͘͘̚͝7̴̨̧̢̧̠̱̪̗̝̘̲̳̭̳̬̭̖̣̙̠̫͚̻͖̥̺̟̪̼͔̙͖͉̩̝̦̖̪̞̲͇̤͉͕̯̰̼̀́͑͊ͅ", "Ṙ̷͓͔͓͖͐̀͗̓̾͒̈́̍́̑͗̀̆̄́̕̕͠͠͠͝è̷̡̠̥̱͉̯͔̩͔͈̗̭̏̈́̌̈̇͐̃̍͋͌̆͊͆͘͠t̷̡̡̗͚̻̭̝͇͉̗̎̒͛̎̿̃̒̓̀̇̀̋̐̈͌͋̾͜͝ư̸̢̨̡̧̢̟̹̺͓̬̟̘͓̙̦̦̣̬͖̄̒͒̋͗͑̄̍̎ͅṟ̶͇̰̜͕̲̦͇͈̖͂̄͆̀͛̓̏̈́̄͑̈́̍͒͘͠͝͠ņ̴̺̉̈́̾̂͂̅̂̆̌̇̌̈́̏͐͌̏̇͗̀̕͝ ̵̧̡̡̡̧̙̯̹̥̠̩̺̠͔̔̎́̔̄̈́͐̈́̔̔̃̔̿͋̃̍̃̑̓͝͝ͅḨ̸͈̙͐͌͑̀̔̇͘̕͝o̸̢̢͇̹̯̩͇͓̯̞̐͘͜m̶̢̤̠̭͍͖̜̗͉̺̺̍̍̈́̿͊̈́̎̕ẽ̵̡̮̜̦̣̣̰̺̳̙̚,̶̛̻͇͙̞͇̥̤̗̱̯͓̪̞̻̩̩̝̄̓͒͗̽̏͆̍͒̍̀͌̾̕̚̕͘͘͜͠͝͝ͅͅ ̵̧̢̠̥͙͎̥̳͎͇̠̹̰̟̖̰̇̀͆̾̓̊͐͋̉͆̿̄̓͛̇́̉̎̍͆̈͜͠͠C̵̙͓̬̥̻̼̬̻̲̫̟̗̩̈́̍́͛̄̐͌̋͒͒̚͜͝h̴̨̢̘̭̙̱̱̘̥̻̆ị̴̬̦̓̈́́͊̾̍͝ľ̵̡̙̩͉̟̼̮̩͈̤̼̻̝͙̰̳͙̼͗̈́͊͑̈́͌̄͂̑̄͛͆͘͝͝͠ͅḑ̸͍͎̝̳͓̯͎̘̥̺̖͋͋́͆̏̓́̇̔̐͌͛̏̚̚͠.̶̛͙̱̤̺͕͇͑́̀̀̾͗̍̀̉̉͑̄́̆̈́̚̕̚̚͜͜͝
+Ŗ̵̨̛͎͇͚̖̔̏̇̉̒̃̉̊̀̿̓̔̽̊̈́́̃̿̃̈́̍́̎̄͋͒̕͘e̸̛̛̛̠͈̰͇̙̣͇̞̮͖̟͎̥̤̓͂͋́̿́̉̾̇̉̏̐̀̍̇̇̈́̅͂͌̏̓̊͂̊͌̚͘͝ţ̸̛̺̩͚̰̯̳̥̼͔̦̻͉̤̱̜̟̝̻͈̅͊̇̈́́̌̾̊̈̊̐̿̏̓̚͝ͅͅȕ̶̡̬̣͉̭̱̙̗͕̺̤̬̤̞͉̬̬̄̒̇̄͌̀͝ m̵̢̨̱̠̭̯̜̼͕̱͍̖̘̲̦̂͐̍͌̑̀͜͠͠ͅͅ ̷͎̖̞͎̹̙͖̮̮̯͍͖̾͘H̶̡̫͚͔̗̝̳̬͖̱̤̺́̅̋̈́͌͛̍̌̉̂͑͝0̸̢̹̣̙͇̺̜̲͚̦̳̮̳͙̩̯̦̈́m̷̢̨̡͎̟͇̜̠̫̖̼̠͓̼̩̫͙̱͚͎̗̰͇͖̘̋̾̿̌̀̀͂̐̏͌͆͐͊̈́͛͌͑̉̓͂̉͠͠͝͠ȇ̶̢͍͙̿͑̇̅ͅ,̸̧̢̨̡̧̼̜̠̥̲̬͇͙̗̳͉̱̖̥̠̞̮̝̦̙̱̠̦͚̺̈̐͒́̂̀̇͑͋̏̃͗͊̽̂́͋͜ ̵̨̧̢̺͚͉̤͓̲̲͈͖̹̣̬̳̺̳̲̫͉̠͇͖͖͇̮̺́͗̿̂̿̅̅́̅̓̓̈́͛̐̕͝ͅͅC̶̢̡̣͈̰͓̘̰̼̳̗͚̺̖͖̙̫̻̠͚̘̹͑̑̓̒͛̊͒̅̏͊̀́͗̽̀͘͜ḩ̷̡̜̝͉̻̘͚̗͖͈̖͙̣̲̖̳̰̻̘͖̯̰̱̩͋͑̓͆̿̒̿̑̈̕ḯ̴͔̖͎͔̙͚̝̺̙͕̬ḽ̴̟̰̐̀͒͌͑̀̀͂̃̒́͌̓̑͐̑͠͠͝ḍ̵̡̡̢̛̼̞̗̮̩̞͚̲̙̦͍̬̱͚̻̰̘̱̰̼̰͖̲̼̥̣͚͉̀͌̉̆̑͗͗̀̉͆͌̊̓͊̅̓̉̄̈̿̕͠͝͠͝͝ͅ.̴̨̡̡̢̢̠̤̘̳̭͙̹̟̟̩̲̩̜̯͐͛͌̄͌̈́̀͆́͌͗͒̀̿́̆̈́̂͗̇̽̒̅͝
+Ṙ̷͓͔͓͖͐̀͗̓̾͒̈́̍́̑͗̀̆̄́̕̕͠͠͠͝è̷̡̠̥̱͉̯͔̩͔͈̗̭̏̈́̌̈̇͐̃̍͋͌̆͊͆͘͠t̷̡̡̗͚̻̭̝͇͉̗̎̒͛̎̿̃̒̓̀̇̀̋̐̈͌͋̾͜͝ư̸̢̨̡̧̢̟̹̺͓̬̟̘͓̙̦̦̣̬͖̄̒͒̋͗͑̄̍̎ͅṟ̶͇̰̜͕̲̦͇͈̖͂̄͆̀͛̓̏̈́̄͑̈́̍͒͘͠͝͠ņ̴̺̉̈́̾̂͂̅̂̆̌̇̌̈́̏͐͌̏̇͗̀̕͝ ̵̧̡̡̡̧̙̯̹̥̠̩̺̠͔̔̎́̔̄̈́͐̈́̔̔̃̔̿͋̃̍̃̑̓͝͝ͅḨ̸͈̙͐͌͑̀̔̇͘̕͝o̸̢̢͇̹̯̩͇͓̯̞̐͘͜m̶̢̤̠̭͍͖̜̗͉̺̺̍̍̈́̿͊̈́̎̕ẽ̵̡̮̜̦̣̣̰̺̳̙̚,̶̛̻͇͙̞͇̥̤̗̱̯͓̪̞̻̩̩̝̄̓͒͗̽̏͆̍͒̍̀͌̾̕̚̕͘͘͜͠͝͝ͅͅ ̵̧̢̠̥͙͎̥̳͎͇̠̹̰̟̖̰̇̀͆̾̓̊͐͋̉͆̿̄̓͛̇́̉̎̍͆̈͜͠͠C̵̙͓̬̥̻̼̬̻̲̫̟̗̩̈́̍́͛̄̐͌̋͒͒̚͜͝h̴̨̢̘̭̙̱̱̘̥̻̆ị̴̬̦̓̈́́͊̾̍͝ľ̵̡̙̩͉̟̼̮̩͈̤̼̻̝͙̰̳͙̼͗̈́͊͑̈́͌̄͂̑̄͛͆͘͝͝͠ͅḑ̸͍͎̝̳͓̯͎̘̥̺̖͋͋́͆̏̓́̇̔̐͌͛̏̚̚͠.̶̛͙̱̤̺͕͇͑́̀̀̾͗̍̀̉̉͑̄́̆̈́̚̕̚̚͜͜͝", "*eldritch breathing*", "[Ỏ̵̰̯͕̩̳̞̬̥͊B̸̧̨̨̬̻̟̦̲͚̥̲͉̖͎̜̰͍͎̞͖̜͕̯͉͓͎͖̠̳͂͊̍̊́̎̒̔̄̚͜͜͠ͅE̴̡̡̛̛̖͙͍̗̞̫̭̲͖͚̱͔̺̮͚͕̥̟̰̺̘̩̙̱̫̲̲̭̹̮͕̞̘̭̪̲̦̯̤̙̗̯͔͕̒̆̉̆̾͆̀̐̎̄̊̌̎̇̈́̒͗̊̈́̏͑͆̎͛̕͠͝ͅY̸͚̥̞̥̖̊̆̐̔̈̀́͝ͅ.]", "h̴̨̢̠̜͎̮̝̭͉͚͚̘̳͙̙̙̫̻͍̣̱͙͙͙̬̣̊͜͜͜ṱ̵̡̡̧̧̧̧͍̺͖̲̥̭̩͖̠̖̞̠̦̻̫̟͈̥̼̠͔̼͊͊̑̎̒t̷̡̛͕̲̬̼̞͇̝̙͂͌̓̎͌̎̽̈́̎̂̔̌̐̂̾̒̄̓̃̿̌͘͜p̵̢͇̜͈̠̠͕̝̱̙͔͙̲̰͇͛͜s̵̢̨̢̡̪͈̹̤̠̹̜̻͕̝̖̯̞̜̱̋̊̑̂̈́̓̋̑́̇͜͝:̷̢̢̤͙͙͍̭͇̫̹̹̻̲̼͎͇̜͉̘̝͕͔̭̠̩̼̑̑̾̂̉̓̎̌͑͠͠ͅ/̵̨̢̡͍͇̫̞̘͔͚̮̖̫̬͔̞̳͓̲̙͇̠̞̳͇̲̣̬̲̍͌̽̎̄̈́̇̈ͅ/̶͉͙̫́̇w̴̧̛̥̝̲̘̘̻͇̜͒̀͋̍͑̅̓̋̏͌͛͌͘w̶̢̧̨͍̲͖̱̯̗̯̲͖͈̗͎̙̳̗͙̻͇͚̘̃͛̂̄͂͂̇̉̓̈́̍̎͘̚w̶̡̡̢̢͕̝̗͓̳͎͕̲̣̼̙͋̿̐́̀͋́̑̃́̿͘̕͠͠ͅ.̴̧̢̥̹͚̥͍͇̪̰̣͉̭̣̓̄̆͛̔́̀͊̏͐̈͜ỳ̴͙̫͙̺̋͛̀̉̉̑͝õ̴̧̧̼̖̺͓̰͖̪͓̪̪͇̻͙͉̱͉̣̫̤͔̦̋̇̀̔̀̌̊̆̀̔̎̃̃͂̌͆̊͐̂͋̀͒̈́͗͝͝͝ũ̵̢̧̹̪͎͈͉̊̐͋̔̅͗͆̃̏̇͐̎͗̒̓̆́͋̍̕̕̕̕̕͜͠͠͝ẗ̸̢̡̙͓̭͚͉̣̮̳̳̟̞̤̟̥̙͍̭̖̦͎̬͎̭́̍̆͜͝ͅų̴̨̨͔̭̬͔͚̣̼͕͇̘̙̳̝̥͙͔̭͂̈́́͑͌̊̉̿͊͆̓̇͑͂̈́̎̈́͌̔͗̏̌̚̕͜͝͝͝ͅb̴͇͈͋̈́̌̉̐̐̋̈͌̒͂̿͆́̈́̃̆̄̋̑̀̏͒͝ë̸̗̙̜́̈́͛͊̈́̄̈́̍̋̈́̑̇̕̕.̴̨̨̟̭̩͙̰̟̠͕̺̺̖̯̹͉̭͕͂́ċ̴̬̮̩̖̯̤̬̘̽̆͂͊̒̋͂̆̆̒͑̾̈́̉̚͜͝͠ͅơ̶̢̛̲̣͇̭͕̰͇̖̯͇̮̟͕̹̯̦̣̙̪͐̽̊̾̅̇̑̀̎͊̇̽̐̋͐̓̿̆̎̇̽̀͗͛̓͗̕͠ͅͅm̵͈͔̜̜̹͔̘̼͇͉̀͗͋͌̀̈̿͠͝/̴̡̧̲͙̭̦̺͖̩̝̻̥͉͓͎̜̯̮͉̘̪̺͗͒̆̃ͅẇ̵̛͖̟̱̹̮̳̈́͌̅͗͛͆͋̂̂͆͛͗̎̀̇͑̈́͒̚͝͝͝a̸̟̯̦̬̹̯͊͜͝t̶̡̨͇͈̤͙̥̹͓͕̺̹̦͎̖̀͆̊̈̃͊͌̍̋͐ͅͅc̶̜͍̤̯̯̲̗̗͔̹̬͉̳͕̮̗̤̓͆͒͊̇̋̅̋ͅh̴̨̡̢̯͕̳͖͇̥̳̫̭̲̰̤͉̪͚̱̝̬͚̠͇͓͔͚̹̋̇̑̐ͅ?̴̢̥̘̻̬̦̺͈̿͌͛͑̂͆̊̽̇̅̾̏̓̎̊͋̀͛̊̄͋͂̕̕͝͝v̸̧̢̡̛̛̬͙͈̥̞͔͉̼̬̜͈̲͖͕͙͇̫̞̿̆͋̽̋̍̽̿̑̎̄̐̀́̔̂̄̉̊͂́̕̕͘͜ͅ≠̨͋̌͋̈͑͊̈́͐̒̊̐̅̎̈́͛̊̈́̀̽̈́͠d̶̢̛͓̤̖̺͉̼͕͗͋͌͂̊̇̓̿̐̑͊̄̃͂̏́́̊̐̀͐͑̓͘Q̵̡͖̗̘̭͔̪̞̗̳̻̝̈́̆̀̄͛̿͌̽͒̇̄͝ͅw̸̢̢̡̥͖̮̝͉̣̠͚̮̺̝̭̘̩̠̭̤͉͎̮̗̫͉̥͉̑̽̍̍̋̈͠ͅ4̵̨̡͉̜̪̳̘̮͕̳̾̾̀̇̒̔̿̏͆̀̍̆̽͒̈́͑̅͆̚͜͜ͅw̸̡̡̻̱̪̙̲͚͈͔̯͓͓̜͔̦̫̃̋́͊͗̒̋̋̉͑̏̕͘͝͝9̸̥̩̙͙̝͚͔̘̩̞̯̪̬̻͖̜̼͊̂̈͑̂͑̕͝͝W̶̢̧̢̢̛͉̳̜̠̣̳͚̝̰͇̼͚̥̗͔̭̿̓͂͑͗̄̓̈́͗̒́̉̊͋͗̀͐̅̌̇͜͝g̸̡̡̢̧̻̼̯͙̮̬̺͍̗͚̭̟̪͎̥͚͆̔́̐͐̎̓̾̔̓̄̀͝ͅẌ̷̟̳̳̜̗͔͈̠̜̻̙̈́͑́̆͌́͌̿̽̐̊̒̐͠ç̷͇̲̳̭̺͙̱̮̲͉̠̪͖͖̩̖̝͚̖̯̭͇̀̌̐̃̓̔́̉̌̔̍̋̆̿̉̆̍̈́̑͑̏̈̚͜ͅQ̷̪̠̼̤̞͒̒̉̊̊͛͜ͅ", "" ]
+
+[node name="Subsahara Africa" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Lagos" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 197, -325 )
+prompt = [ "I would like to visit Lagos." ]
+
+[node name="Antananarivo" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 2348.76, 961.786 )
+prompt = [ "They have lemurs there, I think.", "I am going to Antananarivo." ]
+
+[node name="Kinshasa" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 805, 211 )
+prompt = [ "I would like to visit Kinshasa.", "My buddies and I are fiming a documentary on bonobos and chimpanzees, but we need to get supplies first. " ]
+
+[node name="Luanda" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 685, 415 )
+prompt = [ "I would like to visit Luanda." ]
+
+[node name="Nairobi" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 1825, 43 )
+prompt = [ "I would like to visit Nairobi.", "I am stopping by before heading south to Mt. Kilimanjaro." ]
+
+[node name="Mogadishu" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 2241, -145 )
+prompt = [ "I would like to visit Mogadishu." ]
+
+[node name="Addis Ababa" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 2005, -521 )
+prompt = [ "I want to go to Addis Ababa." ]
+
+[node name="Abidjan" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( -195, -269 )
+prompt = [ "I would like to visit Abidjan." ]
+
+[node name="Johannesburg" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( 1389.62, 1406.56 )
+prompt = [ "No, It’s not the capital of South Africa." ]
+
+[node name="Timbuktu" parent="SceneLayer/Scene/Airports/Subsahara Africa" instance=ExtResource( 3 )]
+position = Vector2( -153.505, -782.72 )
+prompt = [ "I want to go to Timbuktu." ]
+
+[node name="Arctic" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Anchorage" parent="SceneLayer/Scene/Airports/Arctic" instance=ExtResource( 3 )]
+position = Vector2( -7614.39, -3045.41 )
+prompt = [ "I want to go to Denali.", "I have family in the largest city in Alaska." ]
+
+[node name="Unalaska" parent="SceneLayer/Scene/Airports/Arctic" instance=ExtResource( 3 )]
+position = Vector2( -8322.05, -2693.94 )
+prompt = [ "I am studying the Aleutian Islands." ]
+
+[node name="Nuuk" parent="SceneLayer/Scene/Airports/Arctic" instance=ExtResource( 3 )]
+position = Vector2( -2589.19, -3248.51 )
+prompt = [ "I heard it wasn't really green... but I wanted to see it for myself." ]
+
+[node name="Reykjavik" parent="SceneLayer/Scene/Airports/Arctic" instance=ExtResource( 3 )]
+position = Vector2( -1086.78, -3219.63 )
+prompt = [ "I am going to see the Poetic Edda's original copy.", "I am going to study an authentic Viking house." ]
+
+[node name="Middle East" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Cairo" parent="SceneLayer/Scene/Airports/Middle East" instance=ExtResource( 3 )]
+position = Vector2( 1554.16, -1498.88 )
+prompt = [ "I want to visit the pyramids at Giza.", "I want to visit the Sphinx." ]
+
+[node name="Jerusalem" parent="SceneLayer/Scene/Airports/Middle East" instance=ExtResource( 3 )]
+position = Vector2( 1762.55, -1562.64 )
+prompt = [ "Have you been to the Dome of the Rock?" ]
+
+[node name="Mecca" parent="SceneLayer/Scene/Airports/Middle East" instance=ExtResource( 3 )]
+position = Vector2( 2013.98, -1077.74 )
+prompt = [ "I am carrying out my Hajj." ]
+
+[node name="Dubai" parent="SceneLayer/Scene/Airports/Middle East" instance=ExtResource( 3 )]
+position = Vector2( 2754.81, -1252.85 )
+prompt = [ "I want to visit the Burj Khalifa." ]
+
+[node name="Baghdad" parent="SceneLayer/Scene/Airports/Middle East" instance=ExtResource( 3 )]
+position = Vector2( 2225.77, -1676.84 )
+prompt = [ "I am a time traveller and I plan to visit the House of Wisdom." ]
+
+[node name="South America" type="Node2D" parent="SceneLayer/Scene/Airports"]
+
+[node name="Caracas" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -3304.62, -477.532 )
+prompt = [ "Is Venezuela nice this time of year?" ]
+
+[node name="Quito" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -3906.4, 56.4369 )
+prompt = [ "Is it on the equator or is it a different part of the country?" ]
+
+[node name="Rio de Janeiro" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -2153.91, 1110.47 )
+prompt = [ "On my way to Rio!" ]
+
+[node name="Tierra del Fuego" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -3357.67, 2651.7 )
+prompt = [ "I would like to be dropped directly into the Southern Ocean. What?" ]
+
+[node name="Buenos Aires" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -2885.08, 1755.82 )
+prompt = [ "I want to put that name to the test with my kites. We'll see how good they really are." ]
+
+[node name="Lima" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -3897.92, 467.509 )
+prompt = [ "Three words: colonial, peruvian, architecture.", "When I get there, I'll be taking a bus to Machu Picchu." ]
+
+[node name="Manaus" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -2963.19, 123.085 )
+prompt = [ "I am going to study Amazon wildlife." ]
+
+[node name="Easter Island" parent="SceneLayer/Scene/Airports/South America" instance=ExtResource( 3 )]
+position = Vector2( -4530.02, 40.0237 )
+prompt = [ "The Moai in the ground used to scare me when I was a child." ]
 
 [node name="Player" parent="SceneLayer/Scene" instance=ExtResource( 1 )]
 process_priority = 3
-position = Vector2( -3080, -1836 )
+position = Vector2( -3991.62, -2031.07 )
 SPEED = 70.0
 BOOST_SPEED = 150.0
 STEER_SPEED = 1.5
+
+[node name="Dummy" type="Node2D" parent="SceneLayer/Scene"]
+
+[node name="Honolulu_Dummy" parent="SceneLayer/Scene/Dummy" instance=ExtResource( 3 )]
+position = Vector2( 0, -2.84705 )
+prompt = [ "A second Honolulu should not exist." ]
+
+[node name="New Zealand Dummy" parent="SceneLayer/Scene/Dummy" instance=ExtResource( 3 )]
+position = Vector2( 0, -2.84705 )
+prompt = [ "A second New Zealand should not exist." ]
 
 [node name="UiLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="UiLayer" instance=ExtResource( 4 )]
 
 [node name="Airport" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -2.84705 )
 
 [connection signal="airport_chosen" from="SceneLayer/Scene/Airports" to="SceneLayer/Scene/Player" method="on_destination_changed"]
 [connection signal="answered" from="SceneLayer/Scene/Airports" to="UiLayer/UI" method="on_answered"]

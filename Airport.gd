@@ -2,7 +2,7 @@ extends Area2D
 
 signal dropoff(where)
 
-export(String, MULTILINE) var prompt: String
+export(Array, String, MULTILINE) var prompt
 
 func is_player_here():
 	for body in get_overlapping_bodies():

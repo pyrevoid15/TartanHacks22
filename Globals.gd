@@ -21,8 +21,9 @@ func set_score(x):
 func _process(delta):
 	var fuel_used = delta
 	if Input.is_action_pressed("boost"):
-		fuel_used *= 3
+		fuel_used *= 1.8
 	fuel -= fuel_used
 	progress_bar.value = fuel
 	if fuel <= 0:
 		get_tree().change_scene_to(LOSE_SCREEN)
+		
